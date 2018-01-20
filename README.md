@@ -1,17 +1,20 @@
 ### Queation : Count the occurrences of every word in an input file (Python) 
 Input   : Apple is healthy food. Soda is junk food.
-Output  :  Apple   : 1
+Output  : 
 
-           is      : 2
+Apple   : 1
            
-           healthy : 1
+is      : 2
+
+healthy : 1
            
-           food    : 2
+food    : 2
            
-           Soda    : 1
+Soda    : 1
            
-           junk    : 1
-   
+junk    : 1
+              
+           
    '''
    
    
