@@ -1,16 +1,27 @@
 ### Queation : Count the occurrences of every word in an input file (Python) 
 
 Input       : Apple is healthy food. Soda is junk food.
+
 Output      : 
-Apple       : 1          
+
+Apple       : 1  
+
 is          : 2
-healthy     : 1          
+
+healthy     : 1 
+
 food        : 2
+
 Soda        : 1
+
 junk        : 1
-Description : It is used to count the occurrence of every word in input file 
+
+Description : It is used to count the occurrence of every word in input file.
+
 Author      : Krishagni solution private limited.
-Date        : 20/01/2018.
+
+Date        : 16/01/2018.
+
 version     : KSPL V1.0.
               
            
