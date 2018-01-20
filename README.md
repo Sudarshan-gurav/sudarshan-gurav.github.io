@@ -1,7 +1,6 @@
 <html>
-<title> Assignments....</title>
     <body>
-      
+      Queation : Take an input file and reverse its content. 
       
       
       
