@@ -9,7 +9,7 @@
         healthy : 1
         food    : 2
         Soda    : 1
-        junk    :1
+        junk    : 1
   
         To solve the above problem we have better knowledge in SQL.
         prerequisist :
