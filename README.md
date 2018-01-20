@@ -16,7 +16,7 @@ Output      :
 
 *junk        : 1*
 
-**Description : first approch it take more time to count number of occurrences **
+**Description : first approch it take more time to count number of occurrences**
 
 **Author      : Krishagni solution private limited.**
 
@@ -80,15 +80,13 @@ Output      :
 	db.commit()
 
 	print('connection establish sucessfully')
-
-
+	
 	def drop():
    	cursor.execute('drop table dict_data')
    
 	def create_db():
    	cursor.execute('create table dict_data(name Text unique,value int)')
-
-   	print('table create sucessfully')
+	print('table create sucessfully')
 
 	def makechunk(filer,size=10000):
    	while True:
@@ -109,23 +107,16 @@ Output      :
        		frequency[word] = count + 1
 	
 	def update_dict():
-   
-   	for k,v in frequency.items():
+	for k,v in frequency.items():
      	    cursor.execute('update dict_data set value = value+? where name = ?',(v,k))
       	    if cursor.rowcount == 0:
                      cursor.execute('insert into dict_data(name,value) values (?,?)',(k,v))
+        print('dict update sucessfully')  
 
-   	print('dict update sucessfully')  
-
-
-
-   
 	drop()
-
 	create_db()
 	update_dict()
-                  
-
+	
 	print(" Execution time : {} sec ".format(time.time()-start))
 
 	db.commit()
