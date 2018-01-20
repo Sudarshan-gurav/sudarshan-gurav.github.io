@@ -63,7 +63,9 @@ Output      :
 
 **Author      : Krishagni solution private limited.**
 
-**Description : second approch it take less time as compare to first approach to count number of occurrences**
+**Description : second approch it take less time as compare to first approach to count number of occurrences without using prepared statement**
+
+**Backend     : sqlite3**
 
 **Date        : 17/01/2018.**
 
@@ -123,4 +125,79 @@ Output      :
 	cursor.close()
 	db.close()
 	'''
-    
+**Author      : Krishagni solution private limited.**
+
+**Description : Third approch it take less time as compare to second approach to count number of occurrences using prepared statement**
+
+**Backend     : sqlite3**
+
+**Date        : 17/01/2018.**
+
+**version     : KSPL V3.0**
+
+'''
+	
+	import time,sqlite3
+	start=time.time()
+
+	db = sqlite3.connect('dummy.db')
+	cursor = db.cursor()
+	db.commit()
+
+	print('connection establish sucessfully')
+
+
+	def drop():
+ 	    cursor.execute('drop table dict1')
+  	    print('drop the table sucessfully')
+   
+	def create_db():
+ 	    cursor.execute('create table dict1(name Text unique,value int)')
+
+   	print('table create sucessfully')
+
+	def chunk_call(fileread,size=1000000):
+   	while True:
+   	    data=fileread.read(size).lower()
+     	  if data:
+     	      yield data
+      	 else:
+              break
+       
+	dictionary = {}
+
+	file_read = open('10MB.txt', 'r')
+
+	for data in chunk_call(file_read):
+  	match=data.split(' ')
+   	for word in match:
+       	    count = dictionary.get(word,0)
+            dictionary[word] = count + 1
+
+	def update_dict():
+   	list1=[]
+       for key, value in dictionary.items():
+       list1 += [(value,key)]
+	
+       cursor.executemany('update dict1 set value = value + ? where name = ?',(list1))
+       if cursor.rowcount == 0:
+          cursor.executemany('insert into dict1(value,name) values (?,?)',(list1))
+
+       db.commit()
+       print('dict update sucessfully')
+       del  list1[:]
+       dictionary.clear()            
+       print('dictionary clear sucessfully ')
+      
+       drop()
+       create_db()
+       update_dict()
+                
+       print(" Execution time : {} sec".format(time.time()-start))
+     
+       db.commit()
+       cursor.close()
+       db.close()
+
+     '''
+
