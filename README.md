@@ -16,13 +16,13 @@ Soda        : 1
 
 junk        : 1
 
-Description : It is used to count the occurrence of every word in input file.
+**Description : It is used to count the occurrence of every word in input file.
 
-Author      : Krishagni solution private limited.
+**Author      : Krishagni solution private limited.
 
-Date        : 16/01/2018.
+**Date        : 16/01/2018.
 
-version     : KSPL V1.0.
+**version     : KSPL V1.0.
               
            
    '''
