@@ -70,9 +70,9 @@ Output      :
 **version     : KSPL V2.0**
 
 
-'''
-	 
-	import time,sqlite3
+
+    '''     
+        import time,sqlite3
 	start=time.time()
 
 	db = sqlite3.connect('new.db')
@@ -126,7 +126,7 @@ Output      :
 	update_dict()
                   
 
-	print("***** Execution time : {} sec ******".format(time.time()-start))
+	print(" Execution time : {} sec ".format(time.time()-start))
 
 	db.commit()
 	cursor.close()
