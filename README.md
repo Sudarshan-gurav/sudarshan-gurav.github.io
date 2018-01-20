@@ -1,15 +1,16 @@
 
-      Queation : Count the occurrences of every word in an input file (Python) </h2><
+      ###Queation : Count the occurrences of every word in an input file (Python) 
         
-        Input   : Apple is healthy food. Soda is junk food.
+       #Input   : Apple is healthy food. Soda is junk food.
         
-        Output  :  Apple   : 1
+       #Output  :  Apple   : 1
                    is      : 2
                    healthy : 1
                    food    : 2
                    Soda    : 1
                    junk    : 1
-    
+   
+    ### Markdown
      import re,string,time
 
      start=time.time()
@@ -41,5 +42,5 @@
    
     file.close()
     print("* Execution time : {} sec *".format(time.time()-start))
-      
+       ```markdown
      
