@@ -1,6 +1,6 @@
 <html>
     <body>
-      <h2>Queation : Count the occurrences of every word in an input file (Python) </h2>
+      <sub><h2>Queation : Count the occurrences of every word in an input file (Python) </h2><sub>
         
        <b> Input </b>  : Apple is healthy food. Soda is junk food.
         
