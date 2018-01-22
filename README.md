@@ -96,7 +96,7 @@ Then I have used sqlite3 module to do all the database operations.
 	db.close()
 ```
 
-**Description : This approach it takes less time to count number of occurrences using prepared statement**
+**Description :  count the occurrences of every word using prepared statement**
 
 **Backend     : sqlite3**
 
