@@ -1,6 +1,6 @@
 ### Question : Count the occurrences of every word in an input file (Python) 
 
-Input       : *Apple is healthy food. Soda is junk food.*
+>Input       : *Apple is healthy food. Soda is junk food.*
 
 Output      : 
 
