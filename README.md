@@ -41,7 +41,9 @@ Then i have used sqlite3 module to do all the database operations.
 **version     : KSPL V1.0**
 
 
-   ```python     
+
+```python
+
         import time,sqlite3
 	start=time.time()
 
