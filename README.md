@@ -1,6 +1,6 @@
 ### Question : Count the occurrences of every word in an input file (Python) 
 
-- [x] Input       : *Apple is healthy food. Soda is junk food.*
+Input       : *Apple is healthy food. Soda is junk food.*
 
 Output      : 
 
@@ -16,14 +16,14 @@ Output      :
 
 *junk        : 1*
 
-- [x] **Approch**
+ **Approch**
 
 By looking at the question first thought that came to my mind is to use Dictionary,because dictionary contains key-value pair.But since we have large files using dictionary can get memory error.It is not possible to store huge data into dictionary 
 So instead of using dictionary we could use .csv file but we want to count the occurrence of word,we have to traverse whole file and serach that word and increment their value so it takes more time.
-So the final approch was to use database because using database we can easily traverse database and update and insert the word and their values easily it take less time.
+So the final approach was to use database because using database we can easily traverse database and update and insert the word and their values easily it take less time.
 Then i have used sqlite3 module to do all the database operations.
 
- - [x] **Prerequisite :** 
+ **Prerequisite :** 
  -  Basic SQL knowledge.
  
  -  Transaction management.
