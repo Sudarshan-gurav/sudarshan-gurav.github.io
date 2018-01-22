@@ -162,8 +162,8 @@ Then I have used sqlite3 module to do all the database operations.
           for word in match:
                count = Dictionary.get(word,0)
                Dictionary[word] = count + 1
-               update_db()
-               Dictionary.clear()
+          update_db()
+          Dictionary.clear()
 
        
       db.commit()
