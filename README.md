@@ -41,7 +41,7 @@ Then i have used sqlite3 module to do all the database operations.
 **version     : KSPL V1.0**
 
 
-   ```     
+   ```python     
         import time,sqlite3
 	start=time.time()
 
@@ -165,7 +165,7 @@ Then i have used sqlite3 module to do all the database operations.
       print("***** Execution time : {} sec ******".format(time.time()-start))
 
 ```
-**Execution Flow :**
+# Execution Flow :
 1.  import modules 
 2.  create connection with sqlite3
 3.  then create table to store word and occurrence
