@@ -16,12 +16,13 @@ Output      :
 
 *junk        : 1*
 
-Approch :  By looking at the question first thought that came to my mind is to use Dictionary,because dictionary contains key-value pair.But since we have large files using dictionary can get memory error.It is not possible to store huge data into dictionary.
-So insted of using dictionary we could use .csv file but we want to count the occurrence of word,we have to traverse whole file and serach that word and increment their value so it takes more time.
-So the final approch was to use database because using database we can easily traverse database and update and insert the word and their values easily it take less time.
+**Approch :**
+          By looking at the question first thought that came to my mind is to use Dictionary,because dictionary contains key-value pair.But since we have large files using dictionary can get memory error.It is not possible to store huge data into dictionary.
+         So insted of using dictionary we could use .csv file but we want to count the occurrence of word,we have to traverse whole file and serach that word and increment their value so it takes more time.
+         So the final approch was to use database because using database we can easily traverse database and update and insert the word and their values easily it take less time.
 Then i have used sqlite3 module to do all the database operations.
 
- **prerequisite :** 
+ **Prerequisite :** 
  -  Basic SQL knowledge.
  
  -  Transaction management.
@@ -163,17 +164,17 @@ Then i have used sqlite3 module to do all the database operations.
       print("***** Execution time : {} sec ******".format(time.time()-start))
 
 ```
-**Execution Flow :
--  import modules 
--  create connection with sqlite3
--  then create table to store word and occurrence
--  after creating table read the file in chunk
--  then split the word until space is found and store into the list(.split())
--  iterate the loop on size of list.
--  then update the dictionary for each items 
--  after update_db() method is called then convert the dictionary into list of tuples and pass that into executemany()method.
--  If word already exists then update its value into the database.
--  if word does not exist in database then insert the word and its value into the database.
--  then make the dictionary empty and ready for new chunk. 
--  Repeat.
+**Execution Flow :**
+1.  import modules 
+2.  create connection with sqlite3
+3.  then create table to store word and occurrence
+4.  after creating table read the file in chunk
+5.  then split the word until space is found and store into the list(.split())
+6.  iterate the loop on size of list.
+7.  then update the dictionary for each items 
+8.  after update_db() method is called then convert the dictionary into list of tuples and pass that into executemany()method.
+9.  If word already exists then update its value into the database.
+10.  if word does not exist in database then insert the word and its value into the database.
+11.  then make the dictionary empty and ready for new chunk. 
+12.  Repeat.
 
