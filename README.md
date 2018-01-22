@@ -20,16 +20,14 @@ Output      :
 
 By looking at the question first thought that came to my mind is to use Dictionary, because dictionary contains a key-value pair.But since we have large files using dictionary can get a memory error.It is not possible to store huge data in dictionary
 So instead of using dictionary we could use a .csv file but we want to count the occurrence of a word, we have to traverse the whole file and search that word and increment their value so it takes more time.
-So the final approach was to use a database because using database we can easily traverse database and update and insert the word and their values easily it takes less time.
-Then I have used sqlite3 module to do all the database operations.then first create a connection object that represents the database and then optionally we can create a cursor object, which will help us to execute all SQL statements.
-
+So the final approach was to use a database because using database we can easily traverse database,update and insert the word and their values. I used sqlite3 module to do all the database operations.
  **Prerequisite :** 
  
  -  Basic SQL knowledge.
  
  -  Transaction management.
  
- -  prepared statement.
+ -  Prepared Statement.
  
  **Author      : Krishagni solution private limited.**
 
@@ -100,7 +98,7 @@ Then I have used sqlite3 module to do all the database operations.then first cre
 
 
 
-**Description :  count the occurrences of every word using prepared statement**
+**Description :  Count the occurrences of every word using prepared statement**
 
 **Backend     : sqlite3**
 
