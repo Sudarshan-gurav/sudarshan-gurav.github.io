@@ -18,10 +18,10 @@ Output      :
 
  **Approch**
 
-By looking at the question first thought that came to my mind is to use Dictionary,because dictionary contains key-value pair.But since we have large files using dictionary can get memory error.It is not possible to store huge data into dictionary 
-So instead of using dictionary we could use .csv file but we want to count the occurrence of word,we have to traverse whole file and serach that word and increment their value so it takes more time.
-So the final approach was to use database because using database we can easily traverse database and update and insert the word and their values easily it take less time.
-Then i have used sqlite3 module to do all the database operations.
+By looking at the question first thought that came to my mind is to use Dictionary, because dictionary contains a key-value pair.But since we have large files using dictionary can get a memory error.It is not possible to store huge data in dictionary
+So instead of using dictionary we could use a .csv file but we want to count the occurrence of a word, we have to traverse the whole file and search that word and increment their value so it takes more time.
+So the final approach was to use a database because using database we can easily traverse database and update and insert the word and their values easily it takes less time.
+Then I have used sqlite3 module to do all the database operations.
 
  **Prerequisite :** 
  -  Basic SQL knowledge.
@@ -96,7 +96,7 @@ Then i have used sqlite3 module to do all the database operations.
 	db.close()
 ```
 
-**Description : This approch it take less time to count number of occurrences using prepared statement**
+**Description : This approach it takes less time to count number of occurrences using prepared statement**
 
 **Backend     : sqlite3**
 
@@ -170,14 +170,14 @@ Then i have used sqlite3 module to do all the database operations.
 # Execution Flow :
 1.  import modules 
 2.  create connection with sqlite3
-3.  then create table to store word and occurrence
-4.  after creating table read the file in chunk
+3.  then create table to store word and occurrence.
+4.  after creating table read the file in chunk.
 5.  then split the word until space is found and store into the list(.split())
-6.  iterate the loop on size of list.
-7.  then update the dictionary for each items 
-8.  after update_db() method is called then convert the dictionary into list of tuples and pass that into executemany()method.
-9.  If word already exists then update its value into the database.
+6.  iterate the loop on the size of the list.
+7.  then update the dictionary for each item.
+8.  after update_db() method is called then convert the dictionary into a list of tuples and pass that into executemany()method.
+9.  If a word already exists then update its value into the database.
 10.  if word does not exist in database then insert the word and its value into the database.
-11.  then make the dictionary empty and ready for new chunk. 
+11.  then make the dictionary empty and ready for a new chunk. 
 12.  Repeat.
 
