@@ -29,6 +29,7 @@ Then I have used sqlite3 module to do all the database operations.
  -  Transaction management.
  
  -  prepared statement.
+ 
 
  **Author      : Krishagni solution private limited.**
 
@@ -39,6 +40,7 @@ Then I have used sqlite3 module to do all the database operations.
 **Date        : 17/01/2018.**
 
 **version     : KSPL V1.0**
+
 
 # Program 
 
@@ -96,6 +98,8 @@ Then I have used sqlite3 module to do all the database operations.
 	db.close()
 ```
 
+
+
 **Description :  count the occurrences of every word using prepared statement**
 
 **Backend     : sqlite3**
@@ -103,6 +107,7 @@ Then I have used sqlite3 module to do all the database operations.
 **Date        : 17/01/2018.**
 
 **version     : KSPL V2.0**
+
 
 # Program 
 
