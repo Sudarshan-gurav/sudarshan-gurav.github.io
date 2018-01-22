@@ -16,13 +16,14 @@ Output      :
 
 *junk        : 1*
 
-**Description : first approch it take more time to count number of occurrences**
+**Description : first approch it take more time to count number of occurrences in that program i have use regular expression**
 
 **Author      : Krishagni solution private limited.**
 
 **Date        : 16/01/2018.**
 
 **version     : KSPL V1.0.**
+**About Approach : 
               
  
    
@@ -39,7 +40,7 @@ Output      :
        else:
            break
        
-    frequency = {}
+    Dictionary = {}
 
     file=open('Output.txt','w')
     file=open('Output.txt','a')
@@ -49,10 +50,10 @@ Output      :
     for d in makechunk(file_read):
         match=d.split(' ')
         for word in match:
-            count = frequency.get(word,0)
-            frequency[word] = count + 1
+            count = Dictionary.get(word,0)
+            Dictionary[word] = count + 1
    
-    for k,v in frequency.items():
+    for k,v in Dictionary.items():
         text="* "+k+": "+str(v)+"\n"
         file.write(text)
    
@@ -98,18 +99,18 @@ Output      :
        	  else:
           	 break
        
-	frequency = {}
+	Dictionary = {}
 
 	file_read = open('10MB.txt', 'r')
 
 	for d in makechunk(file_read):
    	    match=d.split(' ')
             for word in match:
-       		count = frequency.get(word,0)
-       		frequency[word] = count + 1
+       		count = Dictionary.get(word,0)
+       		Dictionary[word] = count + 1
 	
 	def update_dict():
-	for k,v in frequency.items():
+	for k,v in Dictionary.items():
      	    cursor.execute('update dict_data set value = value+? where name = ?',(v,k))
       	    if cursor.rowcount == 0:
                      cursor.execute('insert into dict_data(name,value) values (?,?)',(k,v))
@@ -164,19 +165,19 @@ Output      :
       	 else:
               break
        
-	dictionary = {}
+	Dictionary = {}
 
 	file_read = open('10MB.txt', 'r')
 
 	for data in chunk_call(file_read):
   	match=data.split(' ')
    	for word in match:
-       	    count = dictionary.get(word,0)
-            dictionary[word] = count + 1
+       	    count = Dictionary.get(word,0)
+            Dictionary[word] = count + 1
 
 	def update_dict():
    	list1=[]
-       for key, value in dictionary.items():
+       for key, value in Dictionary.items():
        list1 += [(value,key)]
 	
        cursor.executemany('update dict1 set value = value + ? where name = ?',(list1))
@@ -186,8 +187,8 @@ Output      :
        db.commit()
        print('dict update sucessfully')
        del  list1[:]
-       dictionary.clear()            
-       print('dictionary clear sucessfully ')
+       Dictionary.clear()            
+       print('Dictionary clear sucessfully ')
       
        drop()
        create_db()
