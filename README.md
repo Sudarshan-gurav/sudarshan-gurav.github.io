@@ -21,6 +21,7 @@ Output      :
 By looking at the question first thought that came to my mind is to use Dictionary, because dictionary contains a key-value pair.But since we have large files using dictionary can get a memory error.It is not possible to store huge data in dictionary
 So instead of using dictionary we could use a .csv file but we want to count the occurrence of a word, we have to traverse the whole file and search that word and increment their value so it takes more time.
 So the final approach was to use a database because using database we can easily traverse database,update and insert the word and their values. I used sqlite3 module to do all the database operations.
+
  **Prerequisite :** 
  
  -  Basic SQL knowledge.
