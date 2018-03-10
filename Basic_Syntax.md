@@ -31,7 +31,7 @@ MySql syntax :
          CREATE TABLE table_name
          ( col_name data_type contrain,
            col_name data_type contarin,
-           
+          
            .
            .
            .
