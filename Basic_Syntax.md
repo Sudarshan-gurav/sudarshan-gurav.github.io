@@ -1,4 +1,4 @@
-### [Basic_Syntax](https://https://sudarshan-gurav.github.io/Basic_Syntax)---[Basic_Concept](sudarshn-gurav.github.i/Basic_concept) ---[Create_Table and Insert_Row](https://sudarshan-gurav.github.io/Create_Insert)---[Install_step](https://sudarshan-gurav.github.io/install_step)
+### [Basic_Syntax](https://https://sudarshan-gurav.github.io/Basic_Syntax)---[Basic_Concept](sudarshn-gurav.github.i/Basic_concept) ---[Create_Table and Insert_Row](https://sudarshan-gurav.github.io/Create_Insert)---[Install_step](https://sudarshan-gurav.github.io/Install_step)
 
 
 
