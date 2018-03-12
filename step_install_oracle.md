@@ -1,23 +1,26 @@
-## steps Installing Oracle 11g R2 Express Edition on Ubuntu 64-bit
+## Steps Installing Oracle 11g R2 Express Edition on Ubuntu 64-bit
 
 **first we have to download zip file from oracle**
  
  *Link:*
  http://www.oracle.com/technetwork/products/express-edition/downloads/index.html
  
- **step2:to Unzip Downloded file**
+ **Step2:to Unzip Downloded file**
  
 unzip oracle-xe-11.2.0-1.0.x86_64.rpm.zip
 
-**setp3:Install the following packages :**
+**Step3:Install the following packages :**
 > *sudo apt-get update
 > *sudo apt-get install alien libaio1 unixodbc vim
 
-step4:Convert the .rpm package into .deb package :
-sudo alien --scripts -d oracle-xe-11.2.0-1.0.x86_64.rpm
+## Step4:Convert the .rpm package into .deb package :
 
-step5:basically we use chkconfig command can also be used to activate and deactivate services
-> *sudo vim /sbin/chkconfig
+ >   **sudo alien --scripts -d oracle-xe-11.2.0-1.0.x86_64.rpm
+
+##  Step5:basically we use chkconfig command can also be used to activate and deactivate services
+
+>  **sudo vim /sbin/chkconfig
+ 
  (copy and paste the following into the file )
 
 
@@ -53,11 +56,12 @@ step5:basically we use chkconfig command can also be used to activate and deacti
           update-rc.d oracle-xe defaults 80 01
   
   
-  ## step6: Save the above file (Esc -> :wq -> Enter ) provide appropriate execute privilege :
+  ## Step6: Save the above file (Esc -> :wq -> Enter ) provide appropriate execute privilege :
        
    >    *sudo chmod 755 /sbin/chkconfig
    
-   step6:Set the Kernel parameters :
+  
+  ## Step6:Set the Kernel parameters :
    
    >   **sudo vim /etc/sysctl.d/60-oracle.conf 
    
@@ -76,15 +80,15 @@ step5:basically we use chkconfig command can also be used to activate and deacti
            save the file (Esc -> : ->wq ->enter
           
           
- ##  step7:  Verify the change : 
+ ##  Step7:  Verify the change : 
 
 >  **sudo cat /etc/sysctl.d/60-oracle.conf 
     
-  ## step8:restart services
+  ## Step8:restart services
     
   > **sudo service procps restart
   
-  ## step9: make some more required changes :
+  ## Step9: make some more required changes :
     
      1. sudo ln -s /usr/bin/awk /bin/awk 
   
@@ -93,18 +97,18 @@ step5:basically we use chkconfig command can also be used to activate and deacti
      3. touch /var/lock/subsys/listener 
 
   
- ## step10:we are ready to install Oracle 11gR2 XE. Go to the directory where we want to created the ubuntu package file  and enter following commands in terminal :
+ ## Step10:we are ready to install Oracle 11gR2 XE. Go to the directory where we want to created the ubuntu package file  and enter following commands in terminal :
 
 
  >   **sudo dpkg --install oracle-xe_11.2.0-2_amd64.deb  
 
-## step11:
+## Step11:
 
  >   **sudo /etc/init.d/oracle-xe configure 
  
         (enter config information and set password).
         
- ##  step12:
+ ##  Step12:
  
  >    **pico ~/.bashrc set environment variables like java
  
@@ -115,11 +119,11 @@ step5:basically we use chkconfig command can also be used to activate and deacti
           export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
           export PATH=$ORACLE_HOME/bin:$PATH
           
-  ## step13: (These files are used to set environmental items for a users shell)
+  ## Step13: (These files are used to set environmental items for a users shell)
   
   >   **. ~/.profile  
   
-  ##   step13:Start the Oracle 11gR2 XE :
+  ##   Step13:Start the Oracle 11gR2 XE :
 
 >   **sudo service oracle-xe start
 
