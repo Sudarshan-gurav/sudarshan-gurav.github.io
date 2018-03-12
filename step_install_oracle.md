@@ -57,4 +57,40 @@ step5:basically we use chkconfig command can also be used to activate and deacti
           save the file (Esc -> : ->wq ->enter
           
           
-   
+   step7:  Verify the change : 
+
+>  **sudo cat /etc/sysctl.d/60-oracle.conf 
+    
+    step8:restart services
+    
+  > **sudo service procps restart
+  
+   step9: make some more required changes :
+      1. sudo ln -s /usr/bin/awk /bin/awk 
+      2. mkdir /var/lock/subsys  
+      3. touch /var/lock/subsys/listener 
+
+  
+  step10:we are ready to install Oracle 11gR2 XE. Go to the directory where we want to created the ubuntu package file  and enter following commands in terminal :
+
+>   **udo dpkg --install oracle-xe_11.2.0-2_amd64.deb  
+
+step11:
+
+ >   **sudo /etc/init.d/oracle-xe configure 
+ 
+        (enter config information and set password).
+        
+ step12:
+ 
+ >    **~/.bashrc set environment variables like java
+ 
+          export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+          export ORACLE_SID=XE
+          export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
+          export ORACLE_BASE=/u01/app/oracle
+          export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+          export PATH=$ORACLE_HOME/bin:$PATH
+          
+  step13:
+  
