@@ -8,8 +8,6 @@
    >	**$ sudo apt-get update**
 
    >	**$ sudo apt-get install mysql-server**
-	
-   *after hiting above tab one window has popup it ask the password.*
 
    >	**$ systemctl status mysql.service**
   
