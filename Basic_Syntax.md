@@ -1,11 +1,11 @@
 ### [Basic_Syntax](https://sudarshan-gurav.github.io/Basic_Syntax)---[Basic_Concept](https://sudarshan-gurav.github.io/Basic_concept)---[Create_Table and Insert_Row](https://sudarshan-gurav.github.io/Create_Insert)---[Install_step](https://sudarshan-gurav.github.io/Install_step)
 
 
-BASIC SYNTAX :
+## BASIC SYNTAX :
 schema in simple term schema is design of our database 
   if we want to create a large database then first we need to design our database schema 
   
-  Example of schema:
+ ### Example of schema:
       it contain:
      1.table names
      2.attributes
@@ -13,20 +13,20 @@ schema in simple term schema is design of our database
      4.details of key (primary or foriegn key)
      5.description
      
- MySQL CREATE DATABASE this statement is used to create DATABASE in 
- MySql syntax :
+# MySQL CREATE DATABASE this statement is used to create DATABASE in 
+ **MySql syntax:**
  
        CREATE DATABASE database_name ;
  
 MySQL USE statement is used to select database 
 
-MySql syntax :
+**MySql syntax :**
  
         USE database_name
  
-MySQL CREATE statement is used to create table in 
+# MySQL CREATE statement is used to create table in 
 
-MySql syntax :
+**MySql syntax :**
   
          CREATE TABLE table_name
          ( col_name data_type contrain,
