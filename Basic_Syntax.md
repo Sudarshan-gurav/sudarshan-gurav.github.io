@@ -13,20 +13,18 @@ schema in simple term schema is design of our database
      4.details of key (primary or foriegn key)
      5.description
      
-# MySQL CREATE DATABASE this statement is used to create DATABASE in 
- **MySql syntax:**
+ **MySQL CREATE DATABASE this statement is used to create DATABASE in 
+   MySql syntax:**
  
        CREATE DATABASE database_name ;
  
-MySQL USE statement is used to select database 
-
-**MySql syntax :**
+**MySQL USE statement is used to select database 
+  MySql syntax :**
  
         USE database_name
  
-# MySQL CREATE statement is used to create table in 
-
-**MySql syntax :**
+**MySQL CREATE statement is used to create table in 
+  MySql syntax :**
   
          CREATE TABLE table_name
          ( col_name data_type contrain,
@@ -38,9 +36,9 @@ MySQL USE statement is used to select database
            col_name data_type contrain
            );
   
-  MySQL INSERT statement is used to insert record(s) or row(s) into a table.
+  **MySQL INSERT statement is used to insert record(s) or row(s) into a table.**
   
-  1.if we want to INSERT values for specific columns:
+   > **1.if we want to INSERT values for specific columns:**
    
  **MySQL Syntax:**
         
