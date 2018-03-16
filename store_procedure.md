@@ -64,7 +64,7 @@
   
   **A compound statement is a block that can contain other blocks
     
- '''sql
+ ```sql
  
                CREATE PROCEDURE proc_name () 
 
@@ -79,7 +79,7 @@
                     cursors;
                  
                END;
-  '''
+  ```
                
   **Declaring variables**
 
@@ -99,7 +99,7 @@
         
            variable that begins with the @ sign is session variable.
            
-### Parameters :
+> ## Parameters :
  
         
     CREATE PROCEDURE proc_name() : Parameter list is empty
@@ -133,7 +133,7 @@
 ### Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
  
 
-     '''sql
+     ```sql
 
           > DELIMITER $$
                   create procedure p1()
@@ -299,4 +299,4 @@
 
                   ---------------------------------------------------------
               
-     '''
+    ```
