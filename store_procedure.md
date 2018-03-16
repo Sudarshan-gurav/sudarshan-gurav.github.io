@@ -133,7 +133,7 @@
 ### Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
  
 
-     ```sql
+  ```sql
 
           > DELIMITER $$
                   create procedure p1()
@@ -299,4 +299,4 @@
 
                   ---------------------------------------------------------
               
-    ```
+ ```
