@@ -85,15 +85,15 @@
 
             To declare a variable inside a stored procedure, we use the DECLARE  statement :
          
-     >*   DECLARE variable_name datatype(size) DEFAULT default_value;
+ >   *   DECLARE variable_name datatype(size) DEFAULT default_value;
      
   **Assigning variables**
 
             Once you declared a variable, we can start using it. To assign a variable another value, you use the SET  statement, 
             for example:
            
-       >*    DECLARE var_name INT DEFAULT 0;
-       >*     SET var_name = 10;
+  >  *    DECLARE var_name INT DEFAULT 0;
+  >  *     SET var_name = 10;
 
   **If we declare a variable inside BEGIN .... END  block, it will be out of scope if the END is reached.**
         
@@ -132,7 +132,8 @@
 
 ### Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
  
-'''sql
+
+     '''sql
 
           > DELIMITER $$
                   create procedure p1()
@@ -298,4 +299,4 @@
 
                   ---------------------------------------------------------
               
- '''
+     '''
