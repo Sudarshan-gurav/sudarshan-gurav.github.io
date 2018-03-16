@@ -36,7 +36,7 @@
   
   >    *  SELECT VERSION();
   
-  ## pick the Delimiter in Stored procedure.
+   **pick the Delimiter in Stored procedure.**
   
         To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
         
@@ -48,21 +48,21 @@
       
    >  *   select * from table_name $$ (default delimiter is change)
   
-  ## Create Procedure Syntax:
+  **Create Procedure Syntax:**
   
   >   * CREATE PROCEDURE proc_name()
   
-  ## call procedure:
+   **call procedure:**
   
   >   * CALL proc_name $$
   
- ## drop procedure
+ **drop procedure**
   
   >  * DROP PROCEDURE proc_name$$
   
- ## Use bunch of statement inside stored procedure.
+ **Use bunch of statement inside stored procedure.**
   
-  **A compound statement is a block that can contain other blocks
+  **A compound statement is a block that can contain other blocks**
     
  ```sql
  
