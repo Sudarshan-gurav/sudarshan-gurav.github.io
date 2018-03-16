@@ -36,7 +36,7 @@
   
   > *  SELECT VERSION();
   
-  ## pick the Delimiter in Stored procedure.
+  # pick the Delimiter in Stored procedure.
   
         To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
         
@@ -48,48 +48,99 @@
       
       >  * select * from table_name $$ (default delimiter is change)
   
-  ## Create Procedure Syntax:
+  # Create Procedure Syntax:
   
   >   * CREATE PROCEDURE proc_name()
   
-  ## CALL procedure:
+  # CALL procedure:
   
   >   * CALL proc_name $$
   
-  ## DROP procedure
+  # DROP procedure
   
   >  * DROP PROCEDURE proc_name$$
   
-  ## Use bunch of statement inside stored procedure.
+  # Use bunch of statement inside stored procedure.
   
   **A compound statement is a block that can contain other blocks
-  
-  > * CREATE PROCEDURE proc_name () 
-  
-  > * BEGIN      
-  >
-  >      declare_var;
-  >      declare_stmt;
-  >      queries;
-  >      statement_list : It represents one or more statements terminated by a semicolon(;);
-  >      control_stmt;
-  >      loops;
-  >      cursors;
-  >   
-  > * END;
     
-  ## Example of stored procedure.
- '''sql
+     '''sql
+               CREATE PROCEDURE proc_name () 
 
-            > *  DELIMITER $$
-            > *      create procedure p1()
-            > *        begin
-            > *        select * from log_table;
-            > *      end $$
+               BEGIN      
+              
+                    declare_var;
+                    declare_stmt;
+                    queries;
+                    statement_list : It represents one or more statements terminated by a semicolon(;);
+                    control_stmt;
+                    loops;
+                    cursors;
+                 
+               END;'''
+               
+  **Declaring variables**
 
-            > * call p1()$$
+            To declare a variable inside a stored procedure, we use the DECLARE  statement :
+         
+     >*   DECLARE variable_name datatype(size) DEFAULT default_value;
+     
+  **Assigning variables**
 
-            > *     output:
+            Once you declared a variable, we can start using it. To assign a variable another value, you use the SET  statement, 
+            for example:
+           
+       >*    DECLARE var_name INT DEFAULT 0;
+       >*     SET var_name = 10;
+
+  **If we declare a variable inside BEGIN .... END  block, it will be out of scope if the END is reached.**
+        
+           variable that begins with the @ sign is session variable.
+           
+# Parameters :
+ 
+        
+    CREATE PROCEDURE proc_name() : Parameter list is empty
+    
+    CREATE PROCEDURE proc_name (IN varname DATA-TYPE) :
+    
+        pass by value whatever changes we made to this varible inside the body of store procedure it will 
+          
+          not reflate the outside the store procedure in our calling program 
+          
+          which accept a number from the user.
+        
+    CREATE PROCEDURE proc_name (OUT varname DATA-TYPE) :  One output parameter
+    
+    CREATE PROCEDURE proc_name (INOUT varname DATA-TYPE) : both IN-OUT paramter 
+    
+    
+ **ITERATE Statement**
+
+        ITERATE means "start the loop again". ITERATE can appear only within LOOP, REPEAT, and WHILE statements. 
+     syntax :
+
+>*      ITERATE label;
+
+**LEAVE statement**
+
+      LEAVE exits the program
+
+>*     LEAVE label; 
+
+# Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
+ 
+    '''sql
+
+          > DELIMITER $$
+                  create procedure p1()
+                   begin
+                    select * from log_table;
+                  end $$
+
+            > call p1()$$
+
+            >     output:
                   +--------+---------+------------+-------------+
                   | mem_id | book_id | issue_date | return_date |
                   +--------+---------+------------+-------------+
@@ -100,39 +151,41 @@
                   ----------------------------------------------------------------------------------------------------------------
 
 
-                   delimiter ;      //change delimiter
+               >    delimiter ;      //change delimiter
 
-                   delimiter $$      //set delimiter
+               >   delimiter $$      //set delimiter
 
-                  >  * create procedure p2(IN a integer)    // 
-                  >  * begin
-                  >  * set a=a+10;
-                  >  * end 
-                  > $$
-
-
-                  mysql> set @a=4$$
+                   create procedure p2(IN a integer)    // 
+                  begin
+                    set a=a+10;
+                  end 
+                   $$
 
 
-                  mysql> call p2(@a)$$
+                  > set @a=4$$
 
-                  mysql> select @a$$
-                  +------+
+
+                  > call p2(@a)$$
+
+                 > select @a$$
+                 
+                 +------+
                   | @a   |
                   +------+
                   |    4 |
                   +------+
-                  -----------------------------------------------------------------------------------------------------------
+                 
+                 -----------------------------------------------------------------------------------------------------------
 
 
-                  mysql> create procedure p3(out b integer)    
-                      -> begin 
-                      -> set b=10;
-                      -> end $$
+                 > create procedure p3(out b integer)    
+                       begin 
+                          set b=10;
+                       end $$
 
-                  mysql> set @b=4$$
+                 > set @b=4$$
 
-                  mysql> select @b$$
+                 > select @b$$
 
                   +------+
                   | @b   |
@@ -141,29 +194,31 @@
                   +------+
 
 
-                  mysql> call p3(@b)$$
+                > call p3(@b)$$
 
-                  mysql> select @b$$
+                > select @b$$
                   +------+
                   | @b   |
                   +------+
                   |   10 |
                   +------+
 
-                  mysql> set @b=23$$
+                > set @b=23$$
 
 
-                  mysql> select @b$$
+                > select @b$$
+                
                   +------+
                   | @b   |
                   +------+
                   |   23 |
                   +------+
 
-                  mysql> call p3(@b)$$
+                 > call p3(@b)$$
 
 
-                  mysql> select @b$$
+                 > select @b$$
+                 
                   +------+
                   | @b   |
                   +------+
@@ -171,44 +226,72 @@
                   +------+
                   --------------------------------------------------------------------------------------------------------
 
-                       create procedure even_odd(IN num integer)
+                  >     create procedure even_odd(IN num integer)
 
-                  >     begin 
-                  >        if num % 2 = 0 then 
-                  >           select 'even';
-                  >        else
-                  >           select 'odd';
-                  >	end if;
-                  >       end $$
+                       begin 
+                          if num % 2 = 0 then 
+                             select 'even';
+                          else
+                             select 'odd';
+                  	end if;
+                         end $$
 
-                  mysql >> call even_odd(10)$$
+                  > call even_odd(10)$$
 
                               +------+
                               | even |
                               +------+
                               | even |
                               +------+
+                  
                   -------------------------------------------------------------------------------
 
-                   > * create procedure prime(IN a integer )
-                   > *  begin 
-                   > *     declare num integer;
-                   > *     declare count integer;
-                   > *     set num=2;
-                   > *     set count=0;
-                   > *        while num<=a/2 do
-                   > *          if a%num=0 then
-                   > *            set count=count+1;
-                   > *         end if;
-                   > *           set num=num+1;
-                   > *        end while;
-                   > *     if count=0 then
-                   > *         select 'num is prime';
-                   > *     else
-                   > *         select 'num is not prime';
-                   > *     end if;
-                   > *   
-                   > * end $$
+                >  create procedure prime(IN a integer )
+                     begin 
+                        declare num integer;             
+                        declare count integer;
+                        set num=2;
+                        set count=0;
+                           while num<=a/2 do
+                             if a%num=0 then
+                               set count=count+1;
+                            end if;
+                              set num=num+1;
+                           end while;
+                        if count=0 then
+                            select 'num is prime';
+                        else
+                            select 'num is not prime';
+                        end if;
+                      
+                    end $$
+                
+             >   OutPut :
+             
+             > call prime(2)$$
+                        +--------------+
+                        | num is prime |
+                        +--------------+
+                        | num is prime |
+                        +--------------+
+                        
+                 > call prime(4)$$
+                        +------------------+
+                        | num is not prime |
+                        +------------------+
+                        | num is not prime |
+                        +------------------+
+                        
 
-                  ---------------------------------------------------------
-'''
+                > create procedure myproc()
+
+                begin
+                       SELECT * FROM table_name ;
+                end$$
+
+               > call myproc() 
+               > it diplay the table that we selected.
+               
+               
+
+                  ---------------------------------------------------------'''
