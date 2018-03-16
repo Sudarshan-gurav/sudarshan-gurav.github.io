@@ -48,19 +48,19 @@
       
       >  * select * from table_name $$ (default delimiter is change)
   
-  # Create Procedure Syntax:
+  ### Create Procedure Syntax:
   
   >   * CREATE PROCEDURE proc_name()
   
-  # CALL procedure:
+  ### CALL procedure:
   
   >   * CALL proc_name $$
   
-  # DROP procedure
+ ### DROP procedure
   
   >  * DROP PROCEDURE proc_name$$
   
-  # Use bunch of statement inside stored procedure.
+  ### Use bunch of statement inside stored procedure.
   
   **A compound statement is a block that can contain other blocks
     
