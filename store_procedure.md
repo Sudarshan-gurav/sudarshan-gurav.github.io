@@ -1,1 +1,214 @@
+## what is stored procedure in mySQL?
 
+    store proceddure is same as our C,C++ program inside store procedure we can write bunch of code and 
+
+     1 stored procedures help increase the performance,provide code resuabilty and security. 
+     
+     2 Stored procedures help reduce the traffic between application and database server because instead of sending multiple 
+     
+       statements, the application has to send only name and parameters of the stored procedure.
+       
+     3.They allow for variable declarations, flow control.
+     
+     4.MySQL5 has introduce the store procedure.
+     
+     5.Stored procedures are fast. MySQL server takes some advantage of caching, just as prepared statements do.
+     
+  ## what is prepared statement?
+  
+  **MySQL prepared statement usage**
+
+        In order to use MySQL prepared statement, you need to use other three MySQL statements as follows:
+
+    PREPARE – Prepare: At first, the application creates the statement template and send it to the DBMS. 
+    
+    Certain values are left unspecified, called parameters, *placeholders* or *bind* variables (labelled "?" below):
+
+    INSERT INTO table_name (list_attributes) VALUES (?, ?);
+    
+    EXECUTE – Executes a prepared statement preparing by a PREPARE statement.
+    
+    DEALLOCATE PREPARE – Releases a prepared statement.
+    
+  **MySQL has default delimiter is (;) semicolon.**
+   
+  **Check the MySQL version:**
+  
+  > *  SELECT VERSION();
+  
+  ## pick the Delimiter in Stored procedure.
+  
+        To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
+        
+  >   * delimiter $$ ( $$ whatever we want)
+       
+           our delimter is change.Now the default DELIMITER is "$$"
+   
+   **execute simple MySQL Command to check delimiter is change or not:**
+      
+      >  * select * from table_name $$ (default delimiter is change)
+  
+  ## Create Procedure Syntax:
+  
+  >   * CREATE PROCEDURE proc_name()
+  
+  ## CALL procedure:
+  
+  >   * CALL proc_name $$
+  
+  ## DROP procedure
+  
+  >  * DROP PROCEDURE proc_name$$
+  
+  ## Use bunch of statement inside stored procedure.
+  
+  **A compound statement is a block that can contain other blocks
+  
+  > * CREATE PROCEDURE proc_name () 
+  
+  > * BEGIN      
+  >
+  >      declare_var;
+  >      declare_stmt;
+  >      queries;
+  >      statement_list : It represents one or more statements terminated by a semicolon(;);
+  >      control_stmt;
+  >      loops;
+  >      cursors;
+  >   
+  > * END;
+    
+  ## Example of stored procedure.
+ '''sql
+
+            > *  DELIMITER $$
+            > *      create procedure p1()
+            > *        begin
+            > *        select * from log_table;
+            > *      end $$
+
+            > * call p1()$$
+
+            > *     output:
+                  +--------+---------+------------+-------------+
+                  | mem_id | book_id | issue_date | return_date |
+                  +--------+---------+------------+-------------+
+                  |      1 |       1 | 2018-01-10 | 2018-01-20  |
+                  |      2 |       3 | 2018-01-05 | 2018-01-15  |
+                  |      3 |       2 | 2017-12-10 | 2017-12-20  |
+                  -----------------------------------------------
+                  ----------------------------------------------------------------------------------------------------------------
+
+
+                   delimiter ;      //change delimiter
+
+                   delimiter $$      //set delimiter
+
+                  >  * create procedure p2(IN a integer)    // 
+                  >  * begin
+                  >  * set a=a+10;
+                  >  * end 
+                  > $$
+
+
+                  mysql> set @a=4$$
+
+
+                  mysql> call p2(@a)$$
+
+                  mysql> select @a$$
+                  +------+
+                  | @a   |
+                  +------+
+                  |    4 |
+                  +------+
+                  -----------------------------------------------------------------------------------------------------------
+
+
+                  mysql> create procedure p3(out b integer)    
+                      -> begin 
+                      -> set b=10;
+                      -> end $$
+
+                  mysql> set @b=4$$
+
+                  mysql> select @b$$
+
+                  +------+
+                  | @b   |
+                  +------+
+                  |    4 |
+                  +------+
+
+
+                  mysql> call p3(@b)$$
+
+                  mysql> select @b$$
+                  +------+
+                  | @b   |
+                  +------+
+                  |   10 |
+                  +------+
+
+                  mysql> set @b=23$$
+
+
+                  mysql> select @b$$
+                  +------+
+                  | @b   |
+                  +------+
+                  |   23 |
+                  +------+
+
+                  mysql> call p3(@b)$$
+
+
+                  mysql> select @b$$
+                  +------+
+                  | @b   |
+                  +------+
+                  |   10 |
+                  +------+
+                  --------------------------------------------------------------------------------------------------------
+
+                       create procedure even_odd(IN num integer)
+
+                  >     begin 
+                  >        if num % 2 = 0 then 
+                  >           select 'even';
+                  >        else
+                  >           select 'odd';
+                  >	end if;
+                  >       end $$
+
+                  mysql >> call even_odd(10)$$
+
+                              +------+
+                              | even |
+                              +------+
+                              | even |
+                              +------+
+                  -------------------------------------------------------------------------------
+
+                   > * create procedure prime(IN a integer )
+                   > *  begin 
+                   > *     declare num integer;
+                   > *     declare count integer;
+                   > *     set num=2;
+                   > *     set count=0;
+                   > *        while num<=a/2 do
+                   > *          if a%num=0 then
+                   > *            set count=count+1;
+                   > *         end if;
+                   > *           set num=num+1;
+                   > *        end while;
+                   > *     if count=0 then
+                   > *         select 'num is prime';
+                   > *     else
+                   > *         select 'num is not prime';
+                   > *     end if;
+                   > *   
+                   > * end $$
+
+                  ---------------------------------------------------------
+'''
