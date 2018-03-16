@@ -36,7 +36,7 @@
   
   >    *  SELECT VERSION();
   
-  ### pick the Delimiter in Stored procedure.
+  ##   pick the Delimiter in Stored procedure.
   
         To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
         
@@ -48,15 +48,15 @@
       
    >  *   select * from table_name $$ (default delimiter is change)
   
-  ### Create Procedure Syntax:
+  ##   Create Procedure Syntax:
   
   >   * CREATE PROCEDURE proc_name()
   
-  ### call procedure:
+  ##   call procedure:
   
   >   * CALL proc_name $$
   
- ### drop procedure
+ ##  drop procedure
   
   >  * DROP PROCEDURE proc_name$$
   
@@ -130,7 +130,7 @@
 
 >    *   LEAVE label; 
 
-### Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
+## Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
  
 
   ```sql
