@@ -34,7 +34,7 @@
    
   **Check the MySQL version:**
   
-  > *  SELECT VERSION();
+  >    *  SELECT VERSION();
   
   ### pick the Delimiter in Stored procedure.
   
@@ -46,17 +46,17 @@
    
    **execute simple MySQL Command to check delimiter is change or not:**
       
-      >  * select * from table_name $$ (default delimiter is change)
+   >  *   select * from table_name $$ (default delimiter is change)
   
   ### Create Procedure Syntax:
   
   >   * CREATE PROCEDURE proc_name()
   
-  ### CALL procedure:
+  ### call procedure:
   
   >   * CALL proc_name $$
   
- ### DROP procedure
+ ### drop procedure
   
   >  * DROP PROCEDURE proc_name$$
   
@@ -64,7 +64,8 @@
   
   **A compound statement is a block that can contain other blocks
     
-     '''sql
+ '''sql
+ 
                CREATE PROCEDURE proc_name () 
 
                BEGIN      
@@ -77,7 +78,8 @@
                     loops;
                     cursors;
                  
-               END;'''
+               END;
+  '''
                
   **Declaring variables**
 
@@ -120,17 +122,17 @@
         ITERATE means "start the loop again". ITERATE can appear only within LOOP, REPEAT, and WHILE statements. 
      syntax :
 
->*      ITERATE label;
+>   *  ITERATE label;
 
 **LEAVE statement**
 
       LEAVE exits the program
 
->*     LEAVE label; 
+>    *   LEAVE label; 
 
 ### Let see Some Simple Example of stored procedure that gives a basic idea about stored procedure.
  
-    '''sql
+'''sql
 
           > DELIMITER $$
                   create procedure p1()
@@ -294,4 +296,6 @@
                
                
 
-                  ---------------------------------------------------------'''
+                  ---------------------------------------------------------
+              
+ '''
