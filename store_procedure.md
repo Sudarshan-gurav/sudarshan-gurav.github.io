@@ -1,18 +1,18 @@
 ## what is stored procedure in mySQL?
 
-    store proceddure is same as our C,C++ program inside store procedure we can write bunch of code and 
+ store proceddure is same as our C,C++ program inside store procedure we can write bunch of code and 
 
-     1 stored procedures help increase the performance,provide code resuabilty and security. 
+1 stored procedures help increase the performance,provide code resuabilty and security. 
      
-     2 Stored procedures help reduce the traffic between application and database server because instead of sending multiple 
-     
-       statements, the application has to send only name and parameters of the stored procedure.
+2 Stored procedures help reduce the traffic between application and database server because instead of sending multiple 
+
+   statements, the application has to send only name and parameters of the stored procedure.
        
-     3.They allow for variable declarations, flow control.
+ 3.They allow for variable declarations, flow control.
      
-     4.MySQL5 has introduce the store procedure.
+ 4.MySQL5 has introduce the store procedure.
      
-     5.Stored procedures are fast. MySQL server takes some advantage of caching, just as prepared statements do.
+ 5.Stored procedures are fast. MySQL server takes some advantage of caching, just as prepared statements do.
      
 ## what is prepared statement?
   
