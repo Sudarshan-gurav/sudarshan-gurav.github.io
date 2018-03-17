@@ -18,17 +18,17 @@
   
   **MySQL prepared statement usage**
 
-        In order to use MySQL prepared statement, you need to use other three MySQL statements as follows:
+   In order to use MySQL prepared statement, you need to use other three MySQL statements as follows:
 
-    PREPARE – Prepare: At first, the application creates the statement template and send it to the DBMS. 
+  PREPARE – Prepare: At first, the application creates the statement template and send it to the DBMS. 
     
-    Certain values are left unspecified, called parameters, *placeholders* or *bind* variables (labelled "?" below):
+  Certain values are left unspecified, called parameters, *placeholders* or *bind* variables (labelled "?" below):
 
-    INSERT INTO table_name (list_attributes) VALUES (?, ?);
+   INSERT INTO table_name (list_attributes) VALUES (?, ?);
     
-    EXECUTE – Executes a prepared statement preparing by a PREPARE statement.
+   EXECUTE – Executes a prepared statement preparing by a PREPARE statement.
     
-    DEALLOCATE PREPARE – Releases a prepared statement.
+   DEALLOCATE PREPARE – Releases a prepared statement.
     
   **MySQL has default delimiter is (;) semicolon.**
    
@@ -38,11 +38,11 @@
   
    **pick the Delimiter in Stored procedure.**
   
-        To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
+   To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
         
   >   * delimiter $$ ( $$ whatever we want)
-       
-           our delimter is change.Now the default DELIMITER is "$$"
+      
+   our delimter is change.Now the default DELIMITER is "$$"
    
    **execute simple MySQL Command to check delimiter is change or not:**
       
@@ -83,13 +83,13 @@
                
   **Declaring variables**
 
-            To declare a variable inside a stored procedure, we use the DECLARE  statement :
+To declare a variable inside a stored procedure, we use the DECLARE  statement :
          
  >   *   DECLARE variable_name datatype(size) DEFAULT default_value;
      
   **Assigning variables**
 
-            Once you declared a variable, we can start using it. To assign a variable another value, you use the SET  statement, 
+Once you declared a variable, we can start using it. To assign a variable another value, you use the SET  statement, 
             for example:
            
   >  *    DECLARE var_name INT DEFAULT 0;
@@ -97,36 +97,35 @@
 
   **If we declare a variable inside BEGIN .... END  block, it will be out of scope if the END is reached.**
         
-           variable that begins with the @ sign is session variable.
+  variable that begins with the @ sign is session variable.
            
 ## Parameters :
- 
-        
-    CREATE PROCEDURE proc_name() : Parameter list is empty
+
+ CREATE PROCEDURE proc_name() : Parameter list is empty
     
-    CREATE PROCEDURE proc_name (IN varname DATA-TYPE) :
+ CREATE PROCEDURE proc_name (IN varname DATA-TYPE) :
     
-        pass by value whatever changes we made to this varible inside the body of store procedure it will 
+  pass by value whatever changes we made to this varible inside the body of store procedure it will 
+         
+  not reflate the outside the store procedure in our calling program 
           
-          not reflate the outside the store procedure in our calling program 
-          
-          which accept a number from the user.
+   which accept a number from the user.
         
-    CREATE PROCEDURE proc_name (OUT varname DATA-TYPE) :  One output parameter
+  CREATE PROCEDURE proc_name (OUT varname DATA-TYPE) :  One output parameter
     
-    CREATE PROCEDURE proc_name (INOUT varname DATA-TYPE) : both IN-OUT paramter 
+   CREATE PROCEDURE proc_name (INOUT varname DATA-TYPE) : both IN-OUT paramter 
     
     
  **ITERATE Statement**
 
-        ITERATE means "start the loop again". ITERATE can appear only within LOOP, REPEAT, and WHILE statements. 
+ITERATE means "start the loop again". ITERATE can appear only within LOOP, REPEAT, and WHILE statements. 
      syntax :
 
 >   *  ITERATE label;
 
 **LEAVE statement**
 
-      LEAVE exits the program
+LEAVE exits the program
 
 >    *   LEAVE label; 
 
