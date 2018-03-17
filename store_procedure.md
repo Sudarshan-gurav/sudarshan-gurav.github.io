@@ -40,11 +40,12 @@
   
    To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
         
-  >   * delimiter $$ ( $$ whatever we want)
-      
-   our delimter is change.Now the default DELIMITER is "$$"
+    ```sql
+        delimiter $$ ( $$ whatever we want)
+    ```  
+  our delimter is change.Now the default DELIMITER is "$$"
    
-   **execute simple MySQL Command to check delimiter is change or not:**
+  **execute simple MySQL Command to check delimiter is change or not:**
       
    >  *   select * from table_name $$ (default delimiter is change)
   
