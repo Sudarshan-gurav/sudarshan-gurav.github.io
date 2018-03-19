@@ -1,4 +1,4 @@
-## what is stored procedure in mySQL?
+## What is stored procedure in MySQL?
 
  store proceddure is same as our C,C++ program inside store procedure we can write bunch of code and 
 
@@ -14,9 +14,9 @@
      
  5.Stored procedures are fast. MySQL server takes some advantage of caching, just as prepared statements do.
      
-## what is prepared statement?
+## What is Prepared Statement?
   
-  **MySQL prepared statement usage**
+  **MySQL Prepared Statement usage**
 
    In order to use MySQL prepared statement, you need to use other three MySQL statements as follows:
 
@@ -36,7 +36,7 @@
   
   >    *  SELECT VERSION();
   
-   **pick the Delimiter in Stored procedure.**
+   **Pick the Delimiter in Stored Procedure.**
   
    To change delimiter because a procedure can have many statements, and everyone must end with a semicolon.
         
@@ -47,7 +47,7 @@
  ```  
   our delimter is change.Now the default DELIMITER is "$$"
    
-  **execute simple MySQL Command to check delimiter is change or not:**
+  **Execute simple MySQL Command to check delimiter is change or not:**
       
    >  *   select * from table_name $$ (default delimiter is change)
   
@@ -55,15 +55,15 @@
   
   >   * CREATE PROCEDURE proc_name()
   
-   **call procedure:**
+   **Call Pocedure:**
   
   >   * CALL proc_name $$
   
- **drop procedure**
+ **Drop Procedure**
   
   >  * DROP PROCEDURE proc_name$$
   
- **Use bunch of statement inside stored procedure.**
+ **Use bunch of Statement Inside Stored Procedure.**
   
   **A compound statement is a block that can contain other blocks**
     
@@ -143,7 +143,7 @@ LEAVE exits the program
                     select * from log_table;
                   end $$
 
-            > call p1()$$
+            > call p1()$$      // call procedure
 
             >     output:
                   +--------+---------+------------+-------------+
@@ -167,10 +167,10 @@ LEAVE exits the program
                    $$
 
 
-                  > set @a=4$$
+                  > set @a=4$$               //set variable @a=4 
 
 
-                  > call p2(@a)$$
+                  > call p2(@a)$$            //call procedure (pass the parameter)
 
                  > select @a$$
                  
@@ -200,13 +200,6 @@ LEAVE exits the program
 
 
                 > call p3(@b)$$
-
-                > select @b$$
-                  +------+
-                  | @b   |
-                  +------+
-                  |   10 |
-                  +------+
 
                 > set @b=23$$
 
