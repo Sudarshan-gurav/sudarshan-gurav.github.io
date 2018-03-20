@@ -132,7 +132,7 @@ Diffrenece between LIST and TUPLE:
 
 
                  
-              ''' basic re it uses ' \ '
+              #basic re it uses ' \ '
 
               number = re.findall(r'\d','my mob no is 9096622179')
 
