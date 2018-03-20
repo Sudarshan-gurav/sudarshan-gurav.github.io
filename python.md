@@ -40,6 +40,9 @@ Diffrenece between LIST and TUPLE:
    It return NONE or match object
    
  **Regular Expression**
+ 
+ A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a 
+ specialized syntax held in a pattern.
    
  Regular expression is also known as *regexes*.
    
@@ -91,7 +94,7 @@ Diffrenece between LIST and TUPLE:
               syntax : findall(pattern, string, flags=0)
                       Return a list of all non-overlapping matches in the string
 
-              findStr = re.findall("need","i needed a water of every morning...")
+              findStr = re.findall("hello "," hello world")
 
                #it find need word in string 
 
@@ -106,7 +109,7 @@ Diffrenece between LIST and TUPLE:
                       string.  For each match, the iterator returns a match object.
 
 
-              str = 'i am sudarshan gurav and i am currently working in krishagni solution private limited'
+              str = 'my name is sudarshan gurav and i am currently working in krishagni solution private limited'
 
               for i  in re.finditer("i",str):
 
@@ -181,8 +184,36 @@ Diffrenece between LIST and TUPLE:
 
               print(matchs)  # this method search the whole string then give result
 
-              #output : span=(10, 15), match='gurav
+              #output : span=(10, 15), match='gurav'
+              
+              --------------------------------------------------------------------------------------------
+              
+            phonenumber =re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+
+            mobile_number = phonenumber.search('my number is 909-662-2179')
+
+            print(mobile_number.group(1))
+
+            print(mobile_number.group(2))
+
+            print(mobile_number.group(0)) # it retrive all the group
+            
+            print(mobile_number.groups())
+
+            #output : 909
+            #         662-2179
+            #         909-662-2179
+            #         ('909-662-2179',)
+            
+            
 
                 
 ```
+**groups()**
+
+This method returns all matching subgroups in a tuple.
+
+**group()**
+
+This method returns entire match (or specific subgroup num)
    
