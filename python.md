@@ -213,7 +213,12 @@ Diffrenece between LIST and TUPLE:
 
 This method returns all matching subgroups in a tuple.
 
+ returns a tuple of multiple values
+ 
 **group()**
 
 This method returns entire match (or specific subgroup num)
    
+**Difference between match and search is only**
+
+match checks for a match only at the beginning of the string, while search checks for a match anywhere in the string (this is what Perl does by default).
