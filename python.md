@@ -17,28 +17,29 @@ Creating a dictionary is as simple as placing items inside curly braces *{}* sep
 An item has a key and the corresponding value expressed as a pair, key: value.*key must be unique*
 
 Diffrenece between LIST and TUPLE:
-LIST:
+
+**LIST:**
 
  The contain of list may be change.
  
  eg. list1=['a','b']
  
- TUPLE:
+ **TUPLE:**
   
    The contain of tuple may not changed.
         *it is actually comma ehich is make a tuple not the parentheses.*
         
-    eg. tup1 = 'a', 'b', 'c'
+  eg. tup1 = 'a', 'b', 'c'
     
-    **What is Module?**
+ **What is Module?**
       
-  **Using re.match()**
+ **Using re.match()**
   
    It take two input 
-   "a regex " and "think to match against"
+   "a regex " and "things to match against"
    It return NONE or match object
    
-   **Regular Expression**
+ **Regular Expression**
    
  Regular expression is also known as *regexes*.
    
@@ -69,7 +70,7 @@ LIST:
                import re
 
 
-              ''' eg : search(pattern, string, flags=0)
+             syntax: search(pattern, string, flags=0)
                       Scan through string looking for a match to the pattern, returning
                       a match object, or None if no match was found.
               ----------------------------------------------------------------------------        
@@ -82,10 +83,10 @@ LIST:
                    print("not found")
 
               ----------------------------------------------------------------------------
-              '''
+              
 
 
-              '''eg : findall(pattern, string, flags=0)
+              syntax : findall(pattern, string, flags=0)
                       Return a list of all non-overlapping matches in the string
 
               findStr = re.findall("need","i needed a water of every morning...")
@@ -96,9 +97,9 @@ LIST:
                   print(i)
 
               ---------------------------------------------------------------------------
-              '''
-              '''
-              eg :finditer(pattern, string, flags=0)
+             
+            
+              syntax :finditer(pattern, string, flags=0)
                       Return an iterator over all non-overlapping matches in the
                       string.  For each match, the iterator returns a match object.
 
@@ -112,8 +113,8 @@ LIST:
                   print(tup1)
 
               -----------------------------------------------------------------------------
-              '''
-              '''
+              
+              
 
 
               str = "sday ,mday ,thueday , wensday , tday , friday ,saturday "
@@ -125,7 +126,7 @@ LIST:
                   print(i)
 
 
-              '''   
+                 
               ''' basic re it uses ' \ '
 
               number = re.findall(r'\d','my mob no is 9096622179')
@@ -145,12 +146,10 @@ LIST:
               print('it dispaly only word having in string '+str(number)) #remove number from existing string
 
 
-              '''
-              '''extend re it is not uses ' \ '
-
-              '''
+              
               # re module with match method :
-              '''match(pattern, string, flags=0)
+              
+              syntax:match(pattern, string, flags=0)
                       Try to apply the pattern at the start of the string, returning
                       a match object, or None if no match was found.
 
@@ -160,7 +159,7 @@ LIST:
 
               print(matchs)   # match method serach only first position of string
 
-              #output: span=(0, 9), match='sudarshan'
+              # output: span=(0, 9), match='sudarshan'
 
               str1 = 'sudarshan gurav'
 
@@ -168,12 +167,12 @@ LIST:
 
               print(matchs)  # no word found in the first place
 
-              #output : None
+               output : None
 
-              '''
+              
               # re module with search method :
 
-              '''
+              
               str1 = 'sudarshan gurav'
 
               matchs=re.search('gurav' , str1)
@@ -182,6 +181,6 @@ LIST:
 
               #output : span=(10, 15), match='gurav
 
-              '''   
+                
 ```
    
