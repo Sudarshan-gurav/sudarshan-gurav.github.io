@@ -64,8 +64,10 @@ Diffrenece between LIST and TUPLE:
  typing '\\d\\d\\d-\\d\\d\\d-\\d\\d\\d\\d'.
  
  
- ## Let,see same basic regular expression example and Method on regexes
- 
+## Let,see same basic regular expression example and Method on regexes
+
+> * help (re) this command give's a all information about re module
+
  ```python
                import re
 
