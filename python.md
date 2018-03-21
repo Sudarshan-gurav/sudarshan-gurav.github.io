@@ -365,6 +365,7 @@ first Approach :
 The | charecter known as *pipe*.the regular expression r'ABC|XYZ' will match either 'ABC' or 'XYZ'.
 
 eg.
+```python
 
    >>>name = re.compile(r'sudarshan|gurav')
 
@@ -374,7 +375,82 @@ eg.
    
 Out>>> 'sudarshan'
 
+
+```
+```python
+ 
+    week = re.compile(r'(sun|mon|fri)day')
+    findweek = week.search('is it sunday')
+    findweek.group()
+    
+    #out>>> 'sunday'
+    
+```
+
 When both *sudarshan and gurav* occur in the searched string, the *first* occurrence of matching text will be returned as the
 
 Match object. 
  
+**Optional Matching with the Question Mark**
+
+ The regex will match text that has *zero instances or one instance* of *wo* in it. 
+ 
+ This is why the regex matches both *'Batwoman' and 'Batman'.*
+ 
+```python
+
+  >>> rexes = re.compile(r'Bat(wo)?man')
+  >>> find = rexes.search('the adventure of Batman')
+  >>> find.group()
+  'Batman'
+  >>> find = rexes.search('the adventure of Batwoman')
+  >>> find.group()
+  'Batwoman'
+  
+```
+
+**Matching Zero or More with the Star**
+
+* means *“match zero or more”*
+
+It can be completely absent or repeated over and over again.Let see example.
+
+```python
+      >>> rexes = re.compile(r'Bat(wo)*man')
+      >>> find = rexes.search('the adventure of Batman')
+      >>> find.group()
+      'Batman'
+      >>> find = rexes.search('the adventure of Batwoman')
+      >>> find.group()
+      'Batwoman'
+      >>> find = rexes.search('the adventure of Batwowowowoman')
+      >>> find.group()
+      'Batwowowowoman'
+
+```
+
+**Matching One or More with the Plus**
+
+ + (or plus) means *“match one or more.”*
+ 
+```python
+
+```
+
+**Matching Specific Repetitions with Curly Brackets**
+
+If we have a group that we want to repeat a specific number of times, follow the group in our regex with a number in curly 
+
+brackets. 
+
+For example, the regex (Hello){3} will match the string 'HelloHelloHello', but it will not match 'HelloHello', 
+
+since the latter has only two repeats of the (Hello) group
+
+Insted of one number.you can specify a range by writing a (minimum, maximum )in between the curly brackets. 
+
+For example, the regex (Hello){3,5} will match 'HelloHello', 'HelloHelloHello', and 'HelloHelloHelloHelloHello'.
+
+(Hello){3,} will match three or more instances of the (Hello) group, 
+
+while (Hello){,5} will match zero to five instances. 
