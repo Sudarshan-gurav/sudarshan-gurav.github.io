@@ -454,3 +454,25 @@ For example, the regex (Hello){3,5} will match 'HelloHello', 'HelloHelloHello', 
 (Hello){3,} will match three or more instances of the (Hello) group, 
 
 while (Hello){,5} will match zero to five instances. 
+
+**Let see some example**
+``python
+
+                >>> import re
+                >>> helloregex = re.compile(r'(hello){3}')
+                >>> find = helloregex.search('hellohellohello')
+                >>> find.group()
+                'hellohellohello'
+                >>> 
+                >>> 
+                >>> find = helloregex.search('hello')
+                >>> find.group()
+                Traceback (most recent call last):
+                  File "<pyshell#8>", line 1, in <module>
+                    find.group()
+                AttributeError: 'NoneType' object has no attribute 'group'
+                >>> find ==None
+                True
+
+```
+
