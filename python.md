@@ -52,7 +52,7 @@ Diffrenece between LIST and TUPLE:
  
  All regexes function in python are in the *re* module
  
- >>> import re
+ > * import re
  
 **Help page**
 
@@ -409,9 +409,9 @@ Match object.
   
 ```
 
-**Matching Zero or More with the Star**
+**Matching Zero or More with the Star(*)**
 
-* means *“match zero or more”*
+  (*) means *“match zero or more”*
 
 It can be completely absent or repeated over and over again.Let see example.
 
@@ -431,7 +431,7 @@ It can be completely absent or repeated over and over again.Let see example.
 
 **Matching One or More with the Plus**
 
- + (or plus) means *“match one or more.”*
+  ( + ) (or plus) means *“match one or more.”*
  
 ```python
 
@@ -475,4 +475,25 @@ while (Hello){,5} will match zero to five instances.
                 True
 
 ```
+
+**Greedy and Nongreedy Matching**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
