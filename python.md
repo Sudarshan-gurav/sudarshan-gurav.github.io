@@ -507,13 +507,38 @@ curly bracket followed by a *question mark.*
 
 ```
 
+**NOTE**
+*The question mark can have two meanings in regular expressions: declaring a **nongreedy** match or **flagging** an optional 
+
+group.*
+
+## The findall() Method
 
 
+While search() will return a Match object of the first matched text in the searched string, the findall() method will return the 
 
+strings of every match in the searched string. 
 
+**search()**
 
+```python
+           >>>import re
+           >>> m = re.compile(r'\d{3}-\d{3}-\d{4}')
+           >>> m1 = m.search('cell :123-320-3211 work :123-321-3121')
+           >>> m1.group()
 
+           '123-320-3211'
 
+```
+**findall()**
+
+```python
+         >>>import re
+         >>> m = re.compile(r'\d{3}-\d{3}-\d{4}')
+         >>> m.findall('cell :123-320-3211 work :123-321-3121')
+         ['123-320-3211', '123-321-3121']
+
+```
 
 
 
