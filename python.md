@@ -134,25 +134,46 @@ Diffrenece between LIST and TUPLE:
  
 This module exports the following functions:
  
- match    Match a regular expression pattern to the beginning of a string.
+ **match**  
  
- search   Search a string for the presence of a pattern.
+ Match a regular expression pattern to the beginning of a string.
  
- sub      Substitute occurrences of a pattern found in a string.
+ **search**   
  
- subn     Same as sub, but also return the number of substitutions made.
+ Search a string for the presence of a pattern.
  
- split    Split a string by the occurrences of a pattern.
+ **sub**
  
- findall  Find all occurrences of a pattern in a string.
+ Substitute occurrences of a pattern found in a string.
  
- finditer Return an iterator yielding a match object for each match.
+ **subn**
  
- compile  Compile a pattern into a RegexObject.
+ Same as sub, but also return the number of substitutions made.
  
- purge    Clear the regular expression cache.
+ **split**
  
- escape   Backslash all non-alphanumerics in a string.
+ Split a string by the occurrences of a pattern.
+ 
+ **findall**
+ 
+ Find all occurrences of a pattern in a string.
+ 
+ **finditer**
+ 
+ Return an iterator yielding a match object for each match.
+ 
+ **compile**
+ 
+ Compile a pattern into a RegexObject.
+ 
+ **purge**
+ 
+ Clear the regular expression cache.
+ 
+ 
+ **escape**
+ 
+ Backslash all non-alphanumerics in a string.
 
 **NOTE :In Regular Expression '()' Parentheses is important.
  
