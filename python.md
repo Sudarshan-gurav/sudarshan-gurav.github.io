@@ -222,3 +222,53 @@ This method returns entire match (or specific subgroup num)
 **Difference between match and search is only**
 
 match checks for a match only at the beginning of the string, while search checks for a match anywhere in the string (this is what Perl does by default).
+
+## Simple Login Form:
+
+First Approach :
+
+program simply check login detail.it check name and password varible if it is true then it would be print access granted
+
+and if not then it will print wrong password but this approach work once.
+
+Second Approach :
+
+This Approach We use the while loop it will be check continuesoly the name and password is same or not.
+
+```python
+
+first Approach :
+         name = 'sudarshan'
+         password = 'admin123'
+         name1 = input('enter the name: ')
+         password1 = input('enter the password: ')
+         if name == name1:
+             print('welcome '+name)
+         if password == password1:
+                  print('access granted')
+         else:
+                 print('wrong password')
+                 
+-----------------------------------------------------------------------------------------------------------------------
+ Second Approach :
+ 
+      name = 'sudarshan'
+       password = 'gurav'
+       count = 0
+
+       while True:
+           name1 = input('enter the name: ')
+           password1 = input('enter the password: ')
+           if name == name1:
+               print('welcome '+name)
+               if password == password1:
+                       print('access granted')
+                       break
+           else:
+               print('wrong password')
+               count +=1
+               if (count == 3):
+                   print('try after 5 min')
+                   break
+```
+
