@@ -56,9 +56,9 @@ Diffrenece between LIST and TUPLE:
  
 **Help page**
 
- > *  >>>import re   #It is most important to import regular exression module.
- > *  >>> help (re.match)
- > *  >>>help (re)
+ > *  import re   #It is most important to import regular exression module.
+ > *  help (re.match)
+ > *  help (re)
       it just like man page in Linux.
       
  Since regular expressions frequently use backslashes in them, it is convenient to pass raw strings to the re.compile() function
@@ -71,37 +71,37 @@ Diffrenece between LIST and TUPLE:
 
 **The special characters are:**
        
-"."      Matches any character except a newline.
+"."      :   Matches any character except a newline.
         
-"^"      Matches the start of the string.
+"^"      :   Matches the start of the string.
 
-"$"      Matches the end of the string or just before the newline at
-         the end of the string.
+"$"      :   Matches the end of the string or just before the newline at
+            the end of the string.
         
- "*"      Matches 0 or more (greedy) repetitions of the preceding RE.
+ "*"      :   Matches 0 or more (greedy) repetitions of the preceding RE.
                  Greedy means that it will match as many repetitions as possible.
        
- "+"      Matches 1 or more (greedy) repetitions of the preceding RE.
+ "+"      :  Matches 1 or more (greedy) repetitions of the preceding RE.
        
- "?"      Matches 0 or 1 (greedy) of the preceding RE.
+ "?"      :  Matches 0 or 1 (greedy) of the preceding RE.
        
- ?,+?,?? Non-greedy versions of the previous three special characters.
+ ?,+?,??  :  Non-greedy versions of the previous three special characters.
         
- {m,n}    Matches from m to n repetitions of the preceding RE.
+ {m,n}    :  Matches from m to n repetitions of the preceding RE.
         
- {m,n}?   Non-greedy version of the above.
+ {m,n}?   :  Non-greedy version of the above.
         
- "\\"     Either escapes special characters or signals a special sequence.
+ "\\"     : Either escapes special characters or signals a special sequence.
         
-  []       Indicates a set of characters.
+  []      : Indicates a set of characters.
                  A "^" as the first character indicates a complementing set.
        
- "|"      A|B, creates an RE that will match either A or B.
+ "|"        :  A|B, creates an RE that will match either A or B.
         
- (...)    Matches the RE inside the parentheses.
+ (...)      :  Matches the RE inside the parentheses.
                  The contents can be retrieved or matched later in the string.
         
- ## Ordinory Charecter are**
+ ## Ordinory Charecter are
  
  \number  Matches the contents of the group of the same number.
  
@@ -130,7 +130,7 @@ Diffrenece between LIST and TUPLE:
  \\       Matches a literal backslash.
  
  
- **Regular Expression Funtion**
+ ## Regular Expression Funtion
  
 This module exports the following functions:
  
