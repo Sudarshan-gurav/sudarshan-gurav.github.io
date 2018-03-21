@@ -560,12 +560,208 @@ strings of every match in the searched string.
          ['123-320-3211', '123-321-3121']
 
 ```
+**Character Classes**
+
+There are many such shorthand character classes
+
+```python 
+
+       >>>charecter = re.compile(r'\d+\s\w+')
+       >>>charecter.findall('12 shree, 25 rajesh, 21 sanjay')
+       
+       #output['12 shree', '25 rajesh', '21 sanjay']
+       
+      ------------------------------------------------------------- 
+      
+      >>>ch =re.compile(r'\d+\s\w+\d+\w+')
+      >>>ch.findall('122 sudarshan123admim')
+      
+      #output:['122 sudarshan123admim']
+      
+      -------------------------------------------------------------
+      
+      >>>ch =re.compile(r'\d+\s+\w+\s+\d+\s+\w+')
+      >>>ch.findall('122 sudarshan 123 admim')
+      
+      #output:['122 sudarshan 123 admim']
+      
+      ------------------------------------------------------------
+```
+
+**Making Your Own Character Classes**
+
+```python
+
+         #OwnCharecter =re.compile(r'[enter string or number what we want to serach ]')
+         
+         >>>OwnCharecter =re.compile(r'[ABCabc]')
+         >>>OwnCharecter.findall('as we know About That')
+         #output:['a', 'A', 'b', 'a']
+         
+```
+
+We can also include ranges of letters or numbers by using a hyphen. 
+
+For example, the character class [a-z A-Z 0-9] will match all lowercase letters, uppercase letters, and numbers.
+
+```python 
+  
+        >>> OwnCharecter.findall('as we know About That')
+        ['a', 'A', 'b', 'a']
+        >>> OwnCharecter =re.compile(r'[A-Z\sa-z\s0-9]')    #specify the range between
+        >>> 
+        >>> OwnCharecter.findall('Sudarshan Gurav')
+        ['S', 'u', 'd', 'a', 'r', 's', 'h', 'a', 'n', ' ', 'G', 'u', 'r', 'a', 'v','9', '0', '9', '6', '6', '2', '2', '1', '7',                                   '9']
+        
+        
+```
+Inside the square brackets, the normal regular expression symbols are not interpreted as such. 
+
+This means We do not need to escape the . , * , ?, or () characters with a preceding backslash.
+
+Eg.[0-5\.]   # Not allow
+
+placing a caret character (^) just after the character class’s opening bracket, We can make a negative character class.
+
+A negative character class will match all the characters that are not in the character class. 
+
+The belwo code check vowel inside string :
+
+```python
+
+  >>>vowel = re.complie(r'[aeiouAEIOU]')
+  >>>vowel.findall('every developer as know the c language')
+  
+  #output :['e', 'e', 'e', 'e', 'o', 'e', 'a', 'o', 'e', 'a', 'u', 'a', 'e']
+
+```
+The belwo code ignore vowel inside string :
+
+```python
+     
+      >>>vowel = re.complie(r'[^aeiouAEIOU]')  #use caret symbol
+      >>>vowel.findall('every developer as know the c language')
+    
+      #output :['v', 'r', 'y', ' ', 'd', 'v', 'l', 'p', 'r', ' ', 's', ' ', 'k', 'n', 'w', ' ', 't', 'h', ' ', 'c', ' ', 'l',          'n', 'g', 'g']
 
 
+```
+**The Caret and Dollar Sign Characters**
+
+1. caret symbol (^) at the start of a regex to indicate that a match must occur at the beginning of the searched text.
+
+2. dollar sign ($) at the end of the regex to indicate the string must end with this regex pattern.
 
 
+1.
+```python
+
+               >>> beginsHello = re.compile(r'^Hello')
+               >>> beginsHello.search('Hello world!')
+               <_sre.SRE_Match object; span=(0, 5), match='Hello'>
+
+```
+2.
+```python
+
+                      >>> endsNumber = re.compile(r'\d$')
+                      >>> endsNumber.search('Your number is 42')
+                      <_sre.SRE_Match object; span=(16, 17), match='2'>
+```
+
+The r'^\d+$' regular expression string matches strings that both begin and end with one or more numeric characters.
+
+**The Wildcard Character**
+
+The . (or dot) character in a regular expression is called a wildcard.
+
+```python
+     
+      >>> reg.findall('the sunday and monday as we as friday')
+       ['nday', 'nday', 'iday']
+       
+```
+
+Remember that the dot character will match just one character.
+
+**Matching Everything with Dot-Star**
+
+We can use the dot-star (.* ) to stand in for that “anything.” Remember that the dot character means “any single character except
+
+the newline,” and the star character means “zero or more of the preceding character.”
+
+```python
+
+            >>> name = re.compile(r'First name:(.*) Last name:(.*)') 
+            >>>MatchEvery = name.search('First name:sudarshan Last_name:gurav')
+            >>>MatchEvery.group(1) # sudarshan
+            >>>MatchEvery.group(2) # gurav
+            >>>MatchEvery.group() #  First name:sudarshan Last_name:gurav
+            
+            
+            >>> nongreedyRegex = re.compile(r'<.*?>')
+            >>> mo = nongreedyRegex.search('<That was awesome> experience in krishagni.>')
+            >>> mo.group()
+            '<That was awesome>'
+
+            >>> greedyRegex = re.compile(r'<.*>')
+            >>> mo = greedyRegex.search('<That was awesome> experience in krishagni.>')
+            >>> mo.group()
+            '<That was awesome> experience in krishagni.>'
+            
+        
+```
+
+**REVIEW**
 
 
+    The ? matches zero or one of the preceding group.
 
+    The * matches zero or more of the preceding group.
 
+    The + matches one or more of the preceding group.
 
+    The {n} matches exactly n of the preceding group.
+
+    The {n,} matches n or more of the preceding group.
+
+    The {,m} matches 0 to m of the preceding group.
+
+    The {n,m} matches at least n and at most m of the preceding group.
+
+    {n,m}? or *? or +? performs a nongreedy match of the preceding group.
+
+    ^spam means the string must begin with spam.
+
+    spam$ means the string must end with spam.
+
+    The . matches any character, except newline characters.
+
+    \d, \w, and \s match a digit, word, or space character, respectively.
+
+    \D, \W, and \S match anything except a digit, word, or space character, respectively.
+
+    [abc] matches any character between the brackets (such as a, b, or c).
+
+    [^abc] matches any character that isn’t between the brackets.
+
+**Case-Insensitive Matching**
+
+regular expressions match text with the exact casing we specify. 
+
+**Let see example of Case-Insensitive**
+
+To make your regex case-insensitive, you can pass re.IGNORECASE or re.I as a second argument to re.compile().
+```python 
+     
+     >>> var = re.compile(r'developer',re.I)
+     >>> var.search('The krishagni Developer').group()
+     'Developer'
+     
+     >>> var.search('The krishagni DEVELOPER').group()
+     'DEVELOPER'
+
+```
+**Substituting Strings with the sub() Method**
+
+     
