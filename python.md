@@ -486,24 +486,24 @@ string* possible. The *non-greedy* version of the curly brackets, which matches 
 curly bracket followed by a *question mark.*
 
   ```python
-        
+
+#Greddy        
         >>> greedyHelloRex = re.compile(r'(hello){3,5}')
         >>> regexe = greedyHelloRex.search('hellohellohellohellohello')
         >>> regexe.group()
         'hellohellohellohellohello'
-        >>> 
-        >>> regexe = greedyHelloRex.search('hellohellohellohello')
-        >>> regexe.group()
-        'hellohellohellohello'
-        >>> 
-        >>> regexe = greedyHelloRex.search('hellohello')
-        >>> regexe.group()
-        Traceback (most recent call last):
-          File "<pyshell#19>", line 1, in <module>
-            regexe.group()
-        AttributeError: 'NoneType' object has no attribute 'group'
+       
+        #Display Longest String
         
-        #it will match only above the group of 3 to 5
+#Nongreddy
+
+        >>> import re
+        >>> nongreddy = re.compile(r'(hello){2,4}?')
+        >>> regex = nongreddy.search('hellohellohellohello')
+        >>> regex.group()
+        'hellohello'
+
+        #Display Shortest String 
 
 ```
 
