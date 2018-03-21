@@ -456,7 +456,8 @@ For example, the regex (Hello){3,5} will match 'HelloHello', 'HelloHelloHello', 
 while (Hello){,5} will match zero to five instances. 
 
 **Let see some example**
-``python
+
+ ```python
 
                 >>> import re
                 >>> helloregex = re.compile(r'(hello){3}')
@@ -478,8 +479,33 @@ while (Hello){,5} will match zero to five instances.
 
 **Greedy and Nongreedy Matching**
 
+Python’s regular expressions are *greedy* by default, which means that in *ambiguous* situations they will match the *longest 
 
+string* possible. The *non-greedy* version of the curly brackets, which matches the *shortest* string possible, has the closing 
 
+curly bracket followed by a *question mark.*
+
+  ```python
+        
+        >>> greedyHelloRex = re.compile(r'(hello){3,5}')
+        >>> regexe = greedyHelloRex.search('hellohellohellohellohello')
+        >>> regexe.group()
+        'hellohellohellohellohello'
+        >>> 
+        >>> regexe = greedyHelloRex.search('hellohellohellohello')
+        >>> regexe.group()
+        'hellohellohellohello'
+        >>> 
+        >>> regexe = greedyHelloRex.search('hellohello')
+        >>> regexe.group()
+        Traceback (most recent call last):
+          File "<pyshell#19>", line 1, in <module>
+            regexe.group()
+        AttributeError: 'NoneType' object has no attribute 'group'
+        
+        #it will match only above the group of 3 to 5
+
+```
 
 
 
