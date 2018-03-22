@@ -764,4 +764,75 @@ To make your regex case-insensitive, you can pass re.IGNORECASE or re.I as a sec
 ```
 **Substituting Strings with the sub() Method**
 
+
+
+# READING AND WRITING A FILE IN PYTHON
+
+
+**Files and File Paths**
+
+Windows, paths are written using backslashes (\) as the separator between folder names.
+Linux, however, use the forward slash (/) as their path separator. 
+os.path.join() function is helpful if you need to create strings for filenames. 
+>>> import os
+>>> 
+>>> os.path.join('home','krishagni','Documents')
+'home/krishagni/Documents'
+>>> os.path.join('home','krishagni','XYZ')
+'home/krishagni/XYZ'
+
+joins names from a list of filenames to the end of a folder’s name:
+
+>>> myfiles = ['demo.txt','sql.csv','function.c']
+>>> for filename in myfiles:
+	print(os.path.join('/home/krishagni',filename))
+ 
+/home/krishagni/demo.txt
+/home/krishagni/sql.csv
+/home/krishagni/function.c
+
+We can get the current working directory as a string value with the os.getcwd()  [Like $pwd] 
+
+>>> os.getcwd()
+'/home/krishagni'
+
+This function and change it with os.chdir().
+
+>>> os.chdir('/home/krishagni/Desktop')
+>>> 
+>>> os.getcwd()
+'/home/krishagni/Desktop'
+
+**Absolute vs. Relative Paths**
+
+There are two ways to specify a file path.
+
+    *An absolute path, which always begins with the root folder*
+
+    *A relative path, which is relative to the program’s current working directory*
+
+There are also the dot (.) and dot-dot (..) directory. These are not real directory but special names that can be used in a path. 
+
+A single period (“dot”) for a directory name is shorthand for “this directory.” Two periods (“dot-dot”) means “the parent 
+
+directory.”
+
+
+E.g : Relative Path:
+       
+    > *     ./
+    > *   ../
+    > *   ../demo/file1.txt
+  
+E.g : Absolute path:
+
+    > *  /etc/apache2/conf
+    > *  /home/demo/file1.txt
+    
+  **Creating New Folders with os.makedirs()**
+  
+    >>> import os
+    >>> os.makedirs('/home/krishagni/Desktop/new_creation')
+ 
+
      
