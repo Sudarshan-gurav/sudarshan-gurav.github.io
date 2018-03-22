@@ -932,4 +932,49 @@ os.path.getsize() and os.listdir() together.
 		>>> print(totalsize)
 		84443415
 		>>> 
+		
+**The File Reading/Writing Process**
+
+There are three steps to reading or writing files in Python.
+
+ 1.Call the open() function to return a File object.
+
+ 2.Call the read() or write() method on the File object.
+
+ 3.Close the file by calling the close() method on the File object.
+
+
+**Opening Files with the open() Function**
+
+      
+      >>> helloFile = open('/Users/your_home_dir_path/fine_name.exetension')
+      
+      >>> open_input = open('/home/krishagni/Desktop/re.py')
+      
+  These commands will open the file in “reading plaintext” mode, or read mode for short. 
+ 
+   The call to open() returns a File object. A File object represents a file on your computer
+   
+   **Reading the Contents of Files**
+   
+  1.read():reads the file as an individual string, and so allows relatively easy file-wide manipulations
+  
+  2.readline():reads a single line of the file, allowing the user to parse a single line without necessarily reading the entire   
+   
+  file
+   
+		   >>> open_input = open('/home/krishagni/Desktop/re.py')
+   
+		   >>> open_input = open_input.read()
+		   >>> open_input
+			"message = 'Hello World'"
+	
+------------------------------------------------------
+Readline()
+
+		>>> new = open('re.py')
+		>>> new.readlines()
+		["message = 'Hello World']
+
+---------------------------------------------------------------------------
 
