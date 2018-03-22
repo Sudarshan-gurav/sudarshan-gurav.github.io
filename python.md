@@ -1007,3 +1007,141 @@ writing a file, call the close() method before opening the file again.
 Regex Search: Write a program that opens all .txt files in a folder and searches for any line that matches a user-supplied regular expression. The results should be printed to the screen.
 
 
+# Organizing Files
+
+**The shutil Module**
+
+The shutil (or shell utilities) module has functions to let We copy, move, rename, and delete files in our Python programs. To 
+
+use the shutil functions, we will first need to use import shutil.
+
+**Copying Files and Folders**
+
+Calling shutil.copy(source, destination) will copy the file at the path source to the folder at the path destination. (Both 
+
+source and destination are strings.) If destination is a filename, it will be used as the new name of the copied file. This 
+
+function returns a string of the path of the copied file.
+
+```python
+
+			>>> import shutil,os
+			>>> os.chdir('/')
+			>>> shutil.copy('/home/krishagni/Desktop/hello.txt','/home/krishagni/Documents')
+			'/home/krishagni/Documents/hello.txt'
+
+```
+While shutil.copy() will copy a single file, shutil.copytree() will copy an entire folder and every folder and file contained in it. Calling shutil.copytree(source, destination) 
+
+The shutil.copytree() call creates a new folder named demo with the same content as the original git-repo folder.
+demo
+```python
+
+		>>> shutil.copytree('/home/krishagni/Desktop/git-repo','/home/krishagni/Documents/demo')
+		'/home/krishagni/Documents/demo'
+		>>> 
+		
+```
+
+**Moving and Renaming Files and Folders**
+
+Calling shutil.move(source, destination) will move the file or folder at the path source to the path destination and will return 
+
+a string of the absolute path of the new location.
+
+If destination points to a folder, the source file gets moved into destination and keeps its current filename
+
+
+```python
+
+		>>> import shutil, os
+		>>> 
+		>>> shutil.move('/home/krishagni/Desktop/openspecimen_v5.0.b22_EE.zip','/home/krishagni/Documents/openspecimen1/.')
+		'/home/krishagni/Documents/openspecimen1/./openspecimen_v5.0.b22_EE.zip'
+		>>> 
+		>>> shutil.move('/home/krishagni/Documents/openspecimen1/openspecimen_v5.0.b22_EE.zip','/home/krishagni  /Documents/openspecimen1/installble/')
+		'/home/krishagni/Documents/openspecimen1/installble/openspecimen_v5.0.b22_EE.zip'
+		>>> 
+		
+```		
+
+
+The destination path can also specify a filename. In the following example, the source file is moved and renamed.
+
+```python
+
+	>>> shutil.move('/home/krishagni/Desktop/demo.txt, '/home/krishagni/Documents/new_demo.txt')
+	   '/home/krishagni/Document/new_file.txt'
+
+```
+
+**Permanently Deleting Files and Folders**
+
+1.Calling os.unlink(path) will delete the file at path.
+
+2.Calling os.rmdir(path) will delete the folder at path. This folder must be empty of any files or folders.
+
+3.Calling shutil.rmtree(path) will remove the folder at path, and all files and folders it contains will also be deleted.
+
+```python
+
+		>>> os.chdir('/home/krishagni/')
+		>>> 
+		>>> os.getcwd()
+		'/home/krishagni'
+		>>> for filename in os.listdir():
+			if filename.endswith('.txt'):
+				#os.unlink(filename)
+				print(filename)
+
+
+		tempdata.txt
+		input.txt
+		doc.txt
+		exampleout.txt
+		
+		>>> for filename in os.listdir():
+			if filename.endswith('.txt'):
+				os.unlink(filename)
+				print(filename)
+
+
+		tempdata.txt
+		input.txt
+		doc.txt
+		exampleout.txt
+		>>> for filename in os.listdir():
+			if filename.endswith('.txt'):
+				#os.unlink(filename)
+				print(filename)
+
+
+		>>>#4 file's are delete paramently
+
+```
+
+**Walking a Directory Tree**
+
+os.walk() function 
+
+	for folderName in os.walk('/home/krishagni/Desktop/'):
+             print('The current folder is ' + folderName)
+   
+       # it will diplay all folder and subfolder inside of Desktop directory.
+       
+  **Compressing Files with the zipfile Module**
+  
+ To create a ZipFile object, call the zipfile.ZipFile() function, passing it a string of the .zip file’s filename. Note that 
+ 
+ zipfile is the name of the Python module,
+  
+```python
+			
+			>>> contain_zip = zipfile.ZipFile('openspecimen_v5.0.b22_EE.zip')
+			>>> 
+			>>> contain_zip.namelist()
+
+                        #it display all contain inside Zip file.
+```
+
+A Zip file has it namelist() object
