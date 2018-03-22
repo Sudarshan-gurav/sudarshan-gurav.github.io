@@ -834,5 +834,102 @@ E.g : Absolute path:
     >>> import os
     >>> os.makedirs('/home/krishagni/Desktop/new_creation')
  
+**Handling Absolute and Relative Paths**
 
+The os.path module provides functions for returning the absolute path of a relative path and for checking whether a given path is an absolute path.
+
+    1.Calling os.path.abspath(path) will return a string of the absolute path of the argument. This is an easy way to convert a relative path into an absolute one.
+
+    2.Calling os.path.isabs(path) will return True if the argument is an absolute path and False if it is a relative path.
+
+    3.Calling os.path.relpath(path, start) will return a string of a relative path from the start path to path. If start is not provided, the current working directory is used as the start path.
+
+		>>> os.path.abspath('.')
+		'/home/krishagni/Desktop'
+		>>>
+
+		>>> os.path.abspath('./new_creation')
+		'/home/krishagni/Desktop/new_creation'
+		>>> 
+
+		>>> os.path.isabs('.')
+		False
+		>>> 
+
+		>>> os.path.isabs('/home')
+		True
+		>>> 
+
+		>>> os.path.isabs(os.path.abspath('.'))
+		True
+		>>> 
      
+     
+     
+Calling os.path.dirname(path) will return a string of everything that comes before the last slash in the path argument. 
+
+Calling os.path.basename(path) will return a string of everything that comes after the last slash in the path argument.
+
+E.g :
+  
+  > * /home/krishagni/Desktop/file.txt  [ /home/krishangni/Desktop ] is Dir_name [ file.txt ] is base_name
+  
+  
+		   >>> path = ('/home/krishagni/input.txt')
+		   >>> os.path.basename(path)
+		   'input.txt'
+
+		   >>> os.path.dirname(path)
+		   '/home/krishagni'
+		   >>> 
+
+
+If you need a path’s dir name and base name together, you can just call os.path.split() to get a tuple value with these two strings, like so:
+
+
+		>>>file_path = ('/home/krishagni/Desktop/input.txt')
+		>>> os.path.split(file_path)
+		('/home/krishagni/Desktop', 'input.txt')
+		
+os.path.split() does not take a file path and return a list of strings of each folder. For that, use the split() string method 
+
+and split on the string in os.sep. Recall from earlier that the os.sep variable is set to the correct folder-separating slash for 
+
+the computer running the program.
+
+		>>> file_path.split(os.path.sep)
+		['', 'home', 'krishagni', 'Desktop', 'input.txt']
+		>>> 
+		
+**Finding File Sizes and Folder Contents**
+
+1.Calling os.path.getsize(path) will return the size in bytes of the file in the path argument.
+
+2'Calling os.listdir(path) will return a list of filename strings for each file in the path argument. (Note that this function is 
+
+in the os module, not os.path.)
+
+                 #get the size of directory  
+		 #finding the size of a file in bytes and the files and folders inside a given folder.
+		 
+		>>> os.path.getsize('/home/krishagni/Desktop/')
+		4096   # size of this directory
+		
+		#list of directory's like ls
+		>>> os.listdir('/home/krishagni/Documents/openspecimen1/app')
+		['openspecimen', 'openspecimen2', 'uninstall', 'openspecimen1', 'tomcat-as', '.install4j']
+		>>> 
+
+
+I have a lot of files in /home/krishagni/Desktop. If I want to find the total size of all the files in this directory, I can use 
+
+os.path.getsize() and os.listdir() together.
+
+		>>> for filename in os.listdir('/home/krishagni/Desktop/'):
+			totalsize = totalsize + os.path.getsize(os.path.join('/home/krishagni/Desktop',filename))
+
+
+		>>> print(totalsize)
+		84443415
+		>>> 
+
