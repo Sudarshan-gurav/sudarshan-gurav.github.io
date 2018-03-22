@@ -978,3 +978,32 @@ Readline()
 
 ---------------------------------------------------------------------------
 
+**Writing to Files**
+
+If the filename passed to open() does not exist, both write and append mode will create a new, blank file. After reading or 
+
+writing a file, call the close() method before opening the file again.
+
+		>>> create = open('hello.txt','w')
+		>>> 
+		>>> create.write('added a new linw')
+		16
+		>>> 
+		>>> create = open('hello.txt','a')
+		>>> create.write('addind latest lines')
+		19
+		>>> create.close()
+		
+		>>> create = open('hello.txt')
+		>>> 
+		>>> contain = create.read()
+		>>> create.close()
+		
+		>>> print(contain)
+		added a new linwaddind latest lines
+		
+		
+*Try to solve
+Regex Search: Write a program that opens all .txt files in a folder and searches for any line that matches a user-supplied regular expression. The results should be printed to the screen.
+
+
