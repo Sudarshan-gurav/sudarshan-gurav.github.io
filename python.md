@@ -1150,7 +1150,21 @@ A Zip file has it namelist() object
 
 
 
-####chapter name
+# Debugging
+
+**Raising Exceptions**
+
+Exceptions are raised with a raise statement. In code, a raise statement consists of the following:
+
+1 The raise keyword
+
+2 A call to the Exception() function
+
+3 A string with a helpful error message passed to the Exception() function
+
+If there are no try and except statements covering the raise statement that raised the exception, the program simply crashes and 
+
+displays the exception’s error message.
 
 
 **Using the logging Module**
@@ -1210,3 +1224,47 @@ you’ll end up spending a lot of time removing print() calls from your code for
 I will provide a link for Table of logging level in python:
 
 https://docs.google.com/document/d/1Yr6Vm5fTUQNZcpelT3szKqaR6L1kvIwphUDm4-sQ09U/edit#
+
+
+E.g
+
+```python
+		>>> import logging
+		>>> logging.basicConfig(level=logging.DEBUG, format =' %(asctime)s - %(levelname)s - %(message)s')
+		>>> logging.debug('debuging details')
+		 2018-03-23 17:22:13,853 - DEBUG - debuging details
+		>>> logging.info('The module is working')
+		 2018-03-23 17:23:11,997 - INFO - The module is working
+		>>> logging.warning('error about the log')
+		 2018-03-23 17:24:19,581 - WARNING - error about the log
+		>>> logging.error('An error has occurred.')
+		 2018-03-23 17:24:28,469 - ERROR - An error has occurred.
+		>>> logging.critical('The program is unable to recover!')
+		 2018-03-23 17:24:34,700 - CRITICAL - The program is unable to recover!
+		>>> 
+```
+**Logging to a File**
+
+Instead of displaying the log messages to the screen, you can write them to a text file. The logging.basicConfig() function takes a filename keyword argument, like so:
+
+```python
+
+	import logging
+	logging.basicConfig(filename='myProgramLog.txt', level=logging.DEBUG, format='
+	%(asctime)s - %(levelname)s - %(message)s')
+
+```
+The log messages will be saved to myProgramLog.txt. While logging messages are helpful.
+
+**Breakpoints**
+
+A breakpoint can be set on a specific line of code and forces the debugger to pause whenever the program execution reaches that 
+
+line. 
+
+**In Pyhon IDLE:**
+
+To set a breakpoint, right-click the line in the file editor and select Set Breakpoint.
+
+# Web Scraping
+
