@@ -1205,4 +1205,8 @@ somewhat unwieldy. You may want to use print() calls instead, but don’t give i
 
 you’ll end up spending a lot of time removing print() calls from your code for each log message
 
-http://automatetheboringstuff.com/chapter10/#calibre_link-17
+**Logging Levels**
+
+I will provide a link for Table of logging level in python:
+
+https://docs.google.com/document/d/1Yr6Vm5fTUQNZcpelT3szKqaR6L1kvIwphUDm4-sQ09U/edit#
