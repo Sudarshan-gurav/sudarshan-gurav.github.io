@@ -383,7 +383,7 @@ first Approach :
 ```
 ## Matching Multiple Groups with the Pipe ( | ):
   
-The | charecter known as *pipe*.the regular expression r'ABC|XYZ' will match either 'ABC' or 'XYZ'.
+  The (|) charecter known as *pipe*.the regular expression r'ABC|XYZ' will match either 'ABC' or 'XYZ'.
 
 eg.
 ```python
@@ -455,6 +455,8 @@ It can be completely absent or repeated over and over again.Let see example.
   ( + ) (or plus) means *“match one or more.”*
  
 ```python
+
+
 
 ```
 
@@ -1145,3 +1147,62 @@ os.walk() function
 ```
 
 A Zip file has it namelist() object
+
+
+
+####chapter name
+
+
+**Using the logging Module**
+
+To enable the logging module to display log messages on your screen as your program runs, copy the following to the top of your program (but under the #! python shebang line):
+
+```python
+
+		import logging
+		logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+```
+
+
+
+it creates a LogRecord object that holds information about that event. The logging module’s basicConfig() function lets you 
+
+specify what details about the LogRecord object you want to see and how you want those details displayed.
+
+Here we can see simple program of logging :
+
+```python
+		import logging
+		logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+		logging.debug('Start of program')
+
+		list1 =  ['a','b','c','d']
+
+		for i in list1:
+		    logging.debug('i value is ' + str(i))
+		    print(list1)
+
+              output:
+	      
+	         2018-03-23 16:57:33,644 - DEBUG - Start of program
+		 2018-03-23 16:57:33,653 - DEBUG - i value is a
+		['a', 'b', 'c', 'd']
+		 2018-03-23 16:57:33,663 - DEBUG - i value is b
+		['a', 'b', 'c', 'd']
+		 2018-03-23 16:57:33,674 - DEBUG - i value is c
+		['a', 'b', 'c', 'd']
+		 2018-03-23 16:57:33,684 - DEBUG - i value is d
+		['a', 'b', 'c', 'd']
+		
+		>>> 
+```
+
+**Don’t Debug with print()**
+
+Typing import logging and logging.basicConfig(level=logging.DEBUG, format= '%(asctime)s - %(levelname)s - %(message)s') is 
+
+somewhat unwieldy. You may want to use print() calls instead, but don’t give in to this temptation! Once you’re done debugging, 
+
+you’ll end up spending a lot of time removing print() calls from your code for each log message
+
+http://automatetheboringstuff.com/chapter10/#calibre_link-17
