@@ -1,5 +1,5 @@
 
-[Links of My Blogs](https://sudarshan-gurav.github.io/Assignment.md)
+[Links of My Blogs](https://sudarshan-gurav.github.io/Assignment)
 
 # Resume
 
