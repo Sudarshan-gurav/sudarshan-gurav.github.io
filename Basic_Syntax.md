@@ -79,9 +79,9 @@ Syntax:
 
 Synatx:
 
-> * ALTER TABLE table_name
-> * ADD new_col DATATYPE  
-> * AFTER specific_col;
+>  ALTER TABLE table_name
+>  ADD new_col DATATYPE  
+>  AFTER specific_col;
 
 5.Write a MySQL statement change the data type of the column in the table.
 
