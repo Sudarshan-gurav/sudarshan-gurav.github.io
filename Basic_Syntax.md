@@ -5,7 +5,7 @@
 schema in simple term schema is design of our database 
   if we want to create a large database then first we need to design our database schema 
   
- ### Example of schema:
+ ## Example of schema:
       it contain:
      1.table names
      2.attributes
@@ -48,3 +48,78 @@ schema in simple term schema is design of our database
           col_name2,
         )
        VALUES
+ 
+ **MySQL UPDATE statement is used to modify the existing records in a table.
+ 
+ **MySQL ALTER statement is used to  add, modify, or drop/delete columns in a table.
+ 
+1.RENAME TABLE:
+
+Syntax:
+  
+  >  *  ALTER TABLE countries RENAME country_new;
+  
+E.g:
+
+>   * ALTER TABLE old RENAME new;
+
+2.Write a MySQL statement to add a column to the table.
+
+> *  ALTER TABLE table_name
+>  * ADD Column_name DATATYPE;
+
+3.Write a MySQL statement to **add a columns as the first** column into the table.
+
+Syntax: 
+
+> *   ALTER TABLE table_name
+> *   ADD col_name DATATYPE FIRST;
+
+4.Write a MySQL statement to add a new column after specific column in the table.
+
+Synatx:
+
+> * ALTER TABLE table_name
+> * ADD new_col DATATYPE  
+> * AFTER specific_col;
+
+5.Write a MySQL statement change the data type of the column in the table.
+
+> * ALTER TABLE table_name
+> * MODIFY col_name NEW_DATATYPE;
+
+6.Write a MySQL statement to drop the column from the table.
+
+>  * ALTER TABLE table_name
+>  * DROP col_name;
+
+7.Write a MySQL statement to change the name of the column old to new, keeping the data type and size same.
+
+Syntax:
+
+If data is not impoertant or thier is no data in this column we can change
+
+> *  ALTER TABLE table_name
+> *  DROP old_name,
+> *  ADD new_name DATATYPE
+> *  AFTER col_name; 
+
+But If data is required and we want to change the name of column then use belwo:
+
+Synatx:
+
+> * ALTER TABLE table_name
+> * CHANGE old_col_name new_col_name varchar(25);
+
+8.Write a MySQL statement to add a primary key for the column in the table.
+
+Syntax:
+
+> * ALTER TABLE table_name
+> * ADD PRIMARY KEY(Col_name);
+
+ **MySQL DROP statement is used to
+ 
+ **MySQL DELETE statement is used to delete existing records in a table.
+ 
+ **
