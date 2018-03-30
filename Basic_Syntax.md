@@ -49,9 +49,35 @@ schema in simple term schema is design of our database
         )
        VALUES
  
- **MySQL UPDATE statement is used to modify the existing records in a table.
+ **MySQL UPDATE statement is used to modify the existing records in a table.**
+For a single table, the UPDATE statement updates columns of existing rows in the named table with new values. Specific columns 
+
+can be modified using the SET clause by supplying new values for that column.
+
+The WHERE clause can be used to specify the conditions those identify which rows to update. Without using WHERE clause, all rows 
+
+are updated.
+
+The ORDER BY clause is used to update the order that is already specified.
+
+The LIMIT clause specifies a limit on the number of rows that can be updated. 
  
- **MySQL ALTER statement is used to  add, modify, or drop/delete columns in a table.
+The UPDATE statement supports the following modifiers:
+
+LOW_PRIORITY: Using LOW_PRIORITY keyword, execution of the UPDATE is delayed until no other clients are reading from the table
+
+IGNORE : Using IGNORE keyword, the update statement does not abort even if errors occur during the update.
+
+MySQL UPDATE with WHERE:
+
+MySQL UPDATE column can be used to update some specific columns
+
+Syntax:
+
+        UPDATE table_name SET col_name WHERE col_name = 'value';
+ 
+ 
+ **MySQL ALTER statement is used to  add, modify, or drop/delete columns in a table.**
  
 1.Rename Table rename the exiting table name:
 
@@ -126,7 +152,7 @@ Syntax:
 
 
 
- **MySQL DROP statement is used to remove rows from a table.
+ **MySQL DROP statement is used to remove rows from a table.**
  
 Example: MySQL DELETE specific rows or records
 
@@ -149,7 +175,10 @@ Synatx:
           ORDER BY country DESC LIMIT  2;
           
  
- **MySQL DELETE statement is used to delete existing records in a table.
+ **MySQL DELETE statement is used to delete existing records in a table.**
+ 
+ 
+ 
  
 **MySQL TRUNCATE table**
 
