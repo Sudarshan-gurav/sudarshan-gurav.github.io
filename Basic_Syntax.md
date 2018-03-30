@@ -53,45 +53,45 @@ schema in simple term schema is design of our database
  
  **MySQL ALTER statement is used to  add, modify, or drop/delete columns in a table.
  
-1.RENAME TABLE:
+1.Rename Table rename the exiting table name:
 
 Syntax:
   
-  >  *  ALTER TABLE countries RENAME country_new;
+      ALTER TABLE countries RENAME country_new;
   
 E.g:
 
->   * ALTER TABLE old RENAME new;
+      ALTER TABLE old RENAME new;
 
 2.Write a MySQL statement to add a column to the table.
 
-> *  ALTER TABLE table_name
->  * ADD Column_name DATATYPE;
+     ALTER TABLE table_name
+     ADD Column_name DATATYPE;
 
 3.Write a MySQL statement to **add a columns as the first** column into the table.
 
 Syntax: 
 
-> *   ALTER TABLE table_name
-> *   ADD col_name DATATYPE FIRST;
+       ALTER TABLE table_name
+       ADD col_name DATATYPE FIRST;
 
 4.Write a MySQL statement to add a new column after specific column in the table.
 
 Synatx:
 
->  ALTER TABLE table_name
->  ADD new_col DATATYPE  
->  AFTER specific_col;
+      ALTER TABLE table_name
+      ADD new_col DATATYPE  
+      AFTER specific_col;
 
 5.Write a MySQL statement change the data type of the column in the table.
 
-> * ALTER TABLE table_name
-> * MODIFY col_name NEW_DATATYPE;
+      ALTER TABLE table_name
+      MODIFY col_name NEW_DATATYPE;
 
 6.Write a MySQL statement to drop the column from the table.
 
->  * ALTER TABLE table_name
->  * DROP col_name;
+       ALTER TABLE table_name
+       DROP col_name;
 
 7.Write a MySQL statement to change the name of the column old to new, keeping the data type and size same.
 
@@ -99,27 +99,78 @@ Syntax:
 
 If data is not impoertant or thier is no data in this column we can change
 
-> *  ALTER TABLE table_name
-> *  DROP old_name,
-> *  ADD new_name DATATYPE
-> *  AFTER col_name; 
+      ALTER TABLE table_name
+      DROP old_name,
+      ADD new_name DATATYPE
+      AFTER col_name; 
 
 But If data is required and we want to change the name of column then use belwo:
 
 Synatx:
 
-> * ALTER TABLE table_name
-> * CHANGE old_col_name new_col_name varchar(25);
+      ALTER TABLE table_name
+      CHANGE old_col_name new_col_name varchar(25);
 
 8.Write a MySQL statement to add a primary key for the column in the table.
 
 Syntax:
 
-> * ALTER TABLE table_name
-> * ADD PRIMARY KEY(Col_name);
+      ALTER TABLE table_name
+      ADD PRIMARY KEY(Col_name);
 
- **MySQL DROP statement is used to
+
+9.Write a MySQL statement to add a primary key for a combination of columns.
+
+      ALTER TABLE locations
+      ADD PRIMARY KEY(location_id,country_id);
+
+
+
+ **MySQL DROP statement is used to remove rows from a table.
+ 
+Example: MySQL DELETE specific rows or records
+
+Syntax:
+
+           DELETE FROM table_name 
+           WHERE column_name=row_name;
+           
+Example: MySQL DELETE all rows or records
+
+Syntax:
+
+          DELETE FROM Table_name;
+          
+Example: MySQL DELETE with ORDER BY for limited number of rows
+
+Synatx:
+
+          DELETE FROM newauthor 
+          ORDER BY country DESC LIMIT  2;
+          
  
  **MySQL DELETE statement is used to delete existing records in a table.
  
- **
+**MySQL TRUNCATE table**
+
+MySQL TRUNCATE TABLE statement is used to delete all the rows from a table. Apparently, this is similar to 'DELETE FROM <TABLE 
+
+NAME>' statement,but they are quite different.
+
+Difference between TRUNCATE and DELETE
+
+   TRUNCATE 	                                                                                    DELETE
+
+It is a DDL command (i.e. a command used to define       It is a DML command (i.e. a command used for managing data) and can be 
+
+.                                                         rolled back.
+
+the database structure or schema) and once you have 
+
+deleted the rows using it, 
+
+you can not use the ROLLBACK to undo the task. 	
+
+You can't use WHERE clause. 	                                                  You can use WHERE clause.
+
+Faster than DELETE. 	                                                          Slower than TRUNCATE. 
