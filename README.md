@@ -1,5 +1,5 @@
 
-[Links of My Blogs](https://sudarshan-gurav.github.io/python)
+[Links of My Blogs](https://sudarshan-gurav.github.io/link)
 
 # Resume
 
