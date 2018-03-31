@@ -1,11 +1,18 @@
 # seek in python:
 
+**Simple Demonstartion About seek**
+
 E.g:
+
 '''
 ABC
+
 EFG
+
 HIJ
+
 KLM
+
 NOP
 
 '''
@@ -50,7 +57,6 @@ print('current AFTER SEEK opsition file '+str(cur_pos)) #  0
 
 line = f.read()
 print(str(line))
-
 
 ```python
 
