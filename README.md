@@ -22,15 +22,15 @@ January - April 2018
 
 **HIGHLIGHTS & INTEREST**
 
-*I have good databases knowledge.*
+* I have good databases knowledge.*
 
-*I have Interest to Write Blogs.*
+* I have Interest to Write Blogs.*
 
-*Familiar with Git and Github.*
+* Familiar with Git and Github.*
 
-*Reading a technical books.*
+* Reading a technical books.*
 
-*I have also Good knowledge about Linux and Scripting Languages.*
+* I have also Good knowledge about Linux and Scripting Languages.*
 
 **EDUCATION QUALIFICATION**
 
@@ -44,15 +44,15 @@ January - April 2018
 
 **Languages and Database language:**
 
-C	
+* C	
 
-C++	
+* C++	
 
-JAVA	
+* JAVA	
 
-Python	
+* Python	
 
-MySQL
+* MySQL
 
 **Projects:**
 
