@@ -1,5 +1,7 @@
 [Links of My Blogs](https://sudarshan-gurav.github.io/link)
 
+#One_Page_Resume
+
 Name:        Sudarshan Sanjay Gurav
 
 Address:     Snehankit Colony, Karve Nagar, Pune 411052
@@ -42,7 +44,15 @@ January - April 2018
 
 **Languages and Database language:**
 
-C	C++	JAVA	Python	MySQL
+C	
+
+C++	
+
+JAVA	
+
+Python	
+
+MySQL
 
 **Projects:**
 
