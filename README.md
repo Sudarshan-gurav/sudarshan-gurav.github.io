@@ -22,37 +22,37 @@ January - April 2018
 
 **HIGHLIGHTS & INTEREST**
 
-* I have good databases knowledge.*
+1. I have good databases knowledge.*
 
-* I have Interest to Write Blogs.*
+2. I have Interest to Write Blogs.*
 
-* Familiar with Git and Github.*
+3. Familiar with Git and Github.*
 
-* Reading a technical books.*
+4. Reading a technical books.*
 
-* I have also Good knowledge about Linux and Scripting Languages.*
+5. I have also Good knowledge about Linux and Scripting Languages.*
 
 **EDUCATION QUALIFICATION**
 
-**SSC** - 76%  (March-2011)
+* **SSC** - 76%  (March-2011)
 
-**HSC** - 68% (Feb-2013)
+* **HSC** - 68% (Feb-2013)
 
-**Bachelor’s in Computer Application** - 74%  (June -2016 )
+* **Bachelor’s in Computer Application** - 74%  (June -2016 )
 
 **TECHNICAL SKILL:**
 
 **Languages and Database language:**
 
-* C	
+* **C**	
 
-* C++	
+* **C++**	
 
-* JAVA	
+* **JAVA**	
 
-* Python	
+* **Python**	
 
-* MySQL
+* **MySQL**
 
 **Projects:**
 
@@ -70,5 +70,5 @@ Static library there is an memory issue.
 
 **Language:**
 
-Marathi - Hindi -English
+**Marathi - Hindi -English**
 
