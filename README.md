@@ -30,9 +30,11 @@ January - April 2018
 
 **EDUCATION QUALIFICATION**
 
-SSC - 76%  (March-2011)
-HSC - 68% (Feb-2013)
-Bachelor’s in Computer Application - 74%  (June -2016 )
+**SSC** - 76%  (March-2011)
+
+**HSC** - 68% (Feb-2013)
+
+**Bachelor’s in Computer Application** - 74%  (June -2016 )
 
 **TECHNICAL SKILL:**
 
