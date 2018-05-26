@@ -22,13 +22,13 @@ January - April 2018
 
 **HIGHLIGHTS & INTEREST**
 
-1. I have good databases knowledge.*
+1. I have good databases knowledge.
 
-2. I have Interest to Write Blogs.*
+2. I have Interest to Write Blogs.
 
-3. Familiar with Git and Github.*
+3. Familiar with Git and Github.
 
-4. Reading a technical books.*
+4. Reading a technical books.
 
 5. I have also Good knowledge about Linux and Scripting Languages.*
 
@@ -52,7 +52,19 @@ January - April 2018
 
 * **Python**	
 
+* **PHP**
+
 * **MySQL**
+
+**Other Skill:**
+
+* **Sound knowledge of Shell Scripting and Vim Editor**.
+
+* **Git**
+
+* **Github**
+
+* **Tomcat**
 
 **Projects:**
 
