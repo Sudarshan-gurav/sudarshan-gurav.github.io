@@ -58,6 +58,7 @@
        VALUES
  
  **MySQL UPDATE statement is used to modify the existing records in a table.**
+ 
 For a single table, the UPDATE statement updates columns of existing rows in the named table with new values. Specific columns 
 
 can be modified using the SET clause by supplying new values for that column.
@@ -78,7 +79,7 @@ IGNORE : Using IGNORE keyword, the update statement does not abort even if error
 
 MySQL UPDATE with WHERE:
 
-MySQL UPDATE column can be used to update some specific columns
+**MySQL UPDATE column can be used to update some specific columns**
 
 Syntax:
 
@@ -87,7 +88,7 @@ Syntax:
  
  **MySQL ALTER statement is used to  add, modify, or drop/delete columns in a table.**
  
-1.Rename Table rename the exiting table name:
+**1.Rename Table rename the exiting table name:**
 
 Syntax:
   
@@ -97,19 +98,19 @@ E.g:
 
       ALTER TABLE old RENAME new;
 
-2.Write a MySQL statement to add a column to the table.
+**2.Write a MySQL statement to add a column to the table.**
 
      ALTER TABLE table_name
      ADD Column_name DATATYPE;
 
-3.Write a MySQL statement to **add a columns as the first** column into the table.
+**3.Write a MySQL statement to add a columns as the first  column into the table.**
 
 Syntax: 
 
        ALTER TABLE table_name
        ADD col_name DATATYPE FIRST;
 
-4.Write a MySQL statement to add a new column after specific column in the table.
+**4.Write a MySQL statement to add a new column after specific column in the table.**
 
 Synatx:
 
@@ -117,17 +118,17 @@ Synatx:
       ADD new_col DATATYPE  
       AFTER specific_col;
 
-5.Write a MySQL statement change the data type of the column in the table.
+**5.Write a MySQL statement change the data type of the column in the table.**
 
       ALTER TABLE table_name
       MODIFY col_name NEW_DATATYPE;
 
-6.Write a MySQL statement to drop the column from the table.
+**6.Write a MySQL statement to drop the column from the table.**
 
        ALTER TABLE table_name
        DROP col_name;
 
-7.Write a MySQL statement to change the name of the column old to new, keeping the data type and size same.
+**7.Write a MySQL statement to change the name of the column old to new, keeping the data type and size same.**
 
 Syntax:
 
@@ -145,7 +146,7 @@ Synatx:
       ALTER TABLE table_name
       CHANGE old_col_name new_col_name varchar(25);
 
-8.Write a MySQL statement to add a primary key for the column in the table.
+**8.Write a MySQL statement to add a primary key for the column in the table.**
 
 Syntax:
 
@@ -153,7 +154,7 @@ Syntax:
       ADD PRIMARY KEY(Col_name);
 
 
-9.Write a MySQL statement to add a primary key for a combination of columns.
+**9.Write a MySQL statement to add a primary key for a combination of columns.**
 
       ALTER TABLE locations
       ADD PRIMARY KEY(location_id,country_id);
@@ -198,9 +199,9 @@ Difference between TRUNCATE and DELETE
 
    TRUNCATE 	                                                                                    DELETE
 
-It is a DDL command (i.e. a command used to define       It is a DML command (i.e. a command used for managing data) and can be 
+It is a DDL command (i.e. a command used to define      |||     It is a DML command (i.e. a command used for managing data) and can be 
 
-.                                                         rolled back.
+.                                                             rolled back.
 
 the database structure or schema) and once you have 
 
