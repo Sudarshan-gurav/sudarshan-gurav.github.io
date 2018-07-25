@@ -2,22 +2,24 @@
 
 # Basic Syntax of MySQL:
 
+**what is Schema**
+
 **schema** in simple term schema is design of our database 
   if we want to create a large database then first we need to design our database schema 
   
  ## Example of schema:
      
-     it contain:
+  it contain:
       
-     1.table names
+   1.table names
      
-     2.attributes
+   2.attributes
      
-     3.data type
+   3.data type
      
-     4.details of key (primary or foriegn key)
+   4.details of key (primary or foriegn key)
      
-     5.description
+   5.description
      
  **MySQL CREATE DATABASE this statement is used to create DATABASE in 
    MySql syntax:**
