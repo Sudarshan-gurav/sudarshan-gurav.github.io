@@ -4,7 +4,7 @@
 
 Name:        Sudarshan Sanjay Gurav
 
-Address:     Snehankit Colony, Karve Nagar, Pune 411052
+Address:     Omakar Niwas,behind chaitanya paratha,kharadi,pune
 
 Mobile No:  +919096622179 / +917020212724
 
@@ -46,13 +46,9 @@ January - April 2018
 
 * **C**	
 
-* **C++**	
-
-* **JAVA**	
+* **C++**		
 
 * **Python**	
-
-* **PHP**
 
 * **MySQL**
 
@@ -60,11 +56,10 @@ January - April 2018
 
 * **Sound knowledge of Shell Scripting and Vim Editor**.
 
-* **Git**
+* **Linux**
 
 * **Github**
 
-* **Tomcat**
 
 **Projects:**
 
