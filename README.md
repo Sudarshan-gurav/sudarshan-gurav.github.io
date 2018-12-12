@@ -1,6 +1,6 @@
 # [Links of My Blogs](https://sudarshan-gurav.github.io/link)
 
-#One_Page_Resume
+Resume
 
 Name:        Sudarshan Sanjay Gurav
 
