@@ -1,4 +1,4 @@
-### [Links of My Blogs](https://sudarshan-gurav.github.io/link)
+# [Links of My Blogs](https://sudarshan-gurav.github.io/link)
 
 #One_Page_Resume
 
@@ -15,6 +15,10 @@ GitHub:     https://sudarshan-gurav.github.io/
 Blog:       https://sudarshanguravtech.blogspot.in/
 
 **Experience:**
+
+**Rabbit and Tortoise Technology Solutions** - Machine Learining Engineer
+
+June-2018 - Till Date
 
 **Krishagni solutions private limited** - intern
 
@@ -63,6 +67,10 @@ January - April 2018
 
 **Projects:**
 
+**Face_detection_recognition using OpenCV**
+
+**Optical Charecter recognition using OpenCV**
+
 **Generalised Data Structures library as shared object.**
 
 In This Project I have learned :
@@ -77,5 +85,5 @@ Static library there is an memory issue.
 
 **Language:**
 
-**Marathi - Hindi -English**
+**English - Hindi - Marathi**
 
