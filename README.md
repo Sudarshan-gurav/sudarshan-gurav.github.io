@@ -73,16 +73,9 @@ January - April 2018
 
 **Generalised Data Structures library as shared object.**
 
-In This Project I have learned :
+**Simple Flappy Bird Game Turtule**
 
-Static libraries Library (.a) and Dynamically linked shared object libraries (.so)
-
-In this Project I have learn how  to provide every functionality required to handle all necessary data structure in library format.
-
-Problem I have faced:
-
-Static library there is an memory issue.
-
+**Simple Car_Game using Turtule**
 **Language:**
 
 **English - Hindi - Marathi**
