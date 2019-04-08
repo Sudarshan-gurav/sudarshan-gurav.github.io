@@ -1,8 +1,6 @@
 
 # Link of My Blogs...
 
-### [Flappy_Bird](https://github.com/Sudarshan-gurav/Flappy_Bird)
-### [Car_Game](https://github.com/Sudarshan-gurav/car_game)
 ### [Face_recognition](https://github.com/Sudarshan-gurav/Face_recognition)
 ### [Python_Basic](https://sudarshan-gurav.github.io/python)
 ### [Python_Assignment](https://sudarshan-gurav.github.io/Assignment)
@@ -13,3 +11,5 @@
 ### [Store Procedure in MySQL](https://sudarshan-gurav.github.io/store_procedure)
 ### [Cursor in Store Procedure](https://sudarshan-gurav.github.io/cursor)
 ### [steps to insatll oracle](https://sudarshan-gurav.github.io/step_install_oracle)
+### [Flappy_Bird](https://github.com/Sudarshan-gurav/Flappy_Bird)
+### [Car_Game](https://github.com/Sudarshan-gurav/car_game)
